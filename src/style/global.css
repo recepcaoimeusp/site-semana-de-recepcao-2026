@@ -1,3 +1,30 @@
+:root {
+    --placeholder-pink:#ff80b7;
+    --placeholder-orange:#ffda9b;
+    --placeholder-green:#c1e5b7;
+    --placeholder-indigo:#776aff;
+
+    --link-quem-somos:#ff19b7;
+    --link-semana:#ff80b7;
+    --link-kit-bixe:#ffda9b;
+    --link-ime:#c1e5b7;
+    --link-FAQ:#776aff;
+    --link-fotos:#000;
+    --link-videos:#000;
+
+    --bg-header:#2c2927;
+    --fg-header:#FFF;
+    --bg-footer:#000;
+    --fg-footer:#FFF;
+    --link-facebook:#3b5998;
+    --link-instagram: #833ab4;
+    --link-tiktok:#fe2858;
+    --highlight:#e3334b;
+
+    --font-header: "VT323", monospace;
+    --font-footer: "VT323", monospace;
+}
+
 html {
     font-size: 100%;
 }
