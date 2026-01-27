@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="style/header.css">
 </head>
 
-<body name="quem-somos">
+<body class="flex flex-col min-h-screen" name="quem-somos">
 
     <!--   <main class="md:container mx-auto mt-10 px-4 md:px-0">
         <!-- Conteúdo da página 
@@ -48,7 +48,7 @@
     <!-- Se quiser adicionar um script customizado, adicione-o no final do <body> -->
     <!-- <script src="./scripts/index.js"></script> -->
 
-    <nav class="z-2 w-full h-fit md:h-20 bg-(--bg-header) fixed top-0">
+    <nav class="z-2 w-full h-fit md:h-20 bg-(--bg-header)">
         <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
             <a class="flex-shrink-0 h-20 md:h-full w-auto">
                 <img src="assets/placeholder.png" id="logo" class="h-20 md:h-full w-auto"
@@ -63,7 +63,7 @@
             duration-400  transition-all
             max-h-0 md:max-h-none md:h-full overflow-hidden peer-checked:max-h-96">
                 <li id="link-quem-somos" class="w-full md:w-fit">
-                    <a href="#">Quem Somos</a>
+                    <a href="#">Quem Somos?</a>
                 </li>
                 <li id="link-semana" class="w-full md:w-fit">
                     <a href="">Semana de Recepção</a>
@@ -77,6 +77,9 @@
                 <li id="link-ime" class="w-full md:w-fit">
                     <a href="">O IME</a>
                 </li>
+                <li id="link-ranking" class="w-full md:w-fit">
+                    <a href="">Ranking</a>
+                </li>
                 <li id="link-fotos" class="w-full md:w-fit">
                     <a href="https://sites.google.com/view/recepcaoimeusp" target="_blank">Fotos</a>
                 </li>
@@ -88,8 +91,9 @@
         </div>
     </nav>
 
-
-    <footer class="z-1 w-full h-30 md:h-20 bg-(--bg-footer) fixed bottom-0 ">
+    <!-- Essa div abaixo "faz parte" do footer, uma gambiarra para dar certo -->
+    <div class="grow"></div>
+    <footer class="z-1 w-full h-30 md:h-20 bg-(--bg-footer)">
         <div class="w-full h-full flex flex-col-reverse md:flex-row justify-between items-center">
 
             <div class="text-center content-center h-full">

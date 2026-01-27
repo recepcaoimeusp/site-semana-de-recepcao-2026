@@ -7,10 +7,11 @@
     --link-quem-somos:#ff19b7;
     --link-semana:#ff80b7;
     --link-kit-bixe:#ffda9b;
-    --link-ime:#c1e5b7;
     --link-FAQ:#776aff;
-    --link-fotos:#000;
-    --link-videos:#000;
+    --link-ime:#c1e5b7;
+    --link-ranking:#833ab4;
+    --link-fotos:#fe2858;
+    --link-videos:#c2450b;
 
     --bg-header:#2c2927;
     --fg-header:#FFF;
@@ -24,6 +25,7 @@
     --font-header: "VT323", monospace;
     --font-footer: "VT323", monospace;
 }
+
 
 html {
     font-size: 100%;
