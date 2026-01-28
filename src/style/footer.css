@@ -1,6 +1,7 @@
 footer{
     color: var(--fg-footer);
     font-size: 20px;
+    margin-bottom: -20px;
 }
 
 
@@ -16,7 +17,7 @@ footer .icon:hover{
     transition: 300ms;
 }
 
-footer div div{ margin-left:40px; }
+footer div div{ padding:0 40px 0 40px; }
 
 #link-facebook:hover{ color: var(--link-facebook); }
 #link-instagram:hover{ color: var(--link-instagram); }
