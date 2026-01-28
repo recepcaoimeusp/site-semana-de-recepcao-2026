@@ -1,3 +1,28 @@
-html {
-    font-size: 100%;
+/* Espero que haja algum diretório no servidor com as fontes, né */
+@font-face {
+    font-family: 'Minecraftia-Regular';
+    src:
+        url('../fonts/Minecraftia-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat.ttf') format('truetype');
+}
+
+/*
+IMG é de Incrível Mundo de Gumball, não de imagem kkkkk
+*/
+
+:root {
+    --img-red: #ff80b7;
+    --img-orange: #ffda9b;
+    --img-green: #c1e5b7;
+    --img-blue: #776aff;
+
+    --text-primary: #121212;
+}
+
+section{
+    padding: 0 1rem;
 }
