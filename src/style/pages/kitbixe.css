@@ -1,7 +1,6 @@
 .kb-buttons{
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 20px;
     padding: 1.1rem;
     padding-bottom: 0;
@@ -34,6 +33,6 @@
 }
 
 .kb-buttons a:hover{
-    background-color: var(--img-red);
-    border-color: var(--img-red);
+    background-color: var(--img-darker-red);
+    scale: 1.05;
 }

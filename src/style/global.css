@@ -15,9 +15,13 @@ IMG é de Incrível Mundo de Gumball, não de imagem kkkkk
 */
 
 :root {
+    --img-darker-red: #fa4694;
     --img-red: #ff80b7;
+    --img-darker-orange: #ffc052;
     --img-orange: #ffda9b;
+    --img-darker-green: #95c787;
     --img-green: #c1e5b7;
+    --img-darker-blue: #4a3ce2;
     --img-blue: #776aff;
 
     --text-primary: #121212;
