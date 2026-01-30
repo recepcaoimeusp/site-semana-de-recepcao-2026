@@ -36,3 +36,20 @@
     background-color: var(--img-darker-red);
     scale: 1.05;
 }
+
+.group {
+    animation: walk 5s linear infinite; 
+}
+
+.carousel {
+    display: flex 0 0 2em;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes walk {
+    from {translate: 0;}
+    to {translate: 100%;}
+}
