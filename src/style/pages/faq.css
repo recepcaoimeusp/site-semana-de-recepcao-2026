@@ -7,20 +7,41 @@
 
 /* Exemplo de uso dos temas. Sinta-se livre para remover o código abaixo */ 
 
+/* Idealmente isso estaria em 'global.css', mas deixei aqui de forma temporária*/
+:root {
+    /* Tema Gumball */
+    --gumball-lighter: #7AD7F0;
+    --gumball-primary: #00C6E9;
+    --gumball-secondary: #0288D1;
+
+    /* Tema Darwin */
+    --darwin-lighter: #FFCC80;
+    --darwin-primary: #FF8C44;
+    --darwin-secondary: #E65100;
+
+        /* Tema Anais */
+    --anais-lighter: #FFC1E3;
+    --anais-primary: #F58DA9;
+    --anais-secondary: #D81B60;
+
+    --text-primary: black;
+}
+
+
 body {
-    background-color: var(--robin-primary);
+    background-color: white;
     color: var(--text-primary);
     font-family: 'Croteau Regular';
     font-size: 16px;
 }
 
 nav{
-    background-color: black;
+    background-color: var(--darwin-primary);
 }
 
 nav .active{
-    color: var(--robin-primary) !important;
-    border-bottom: var(--nav-slit-width) solid var(--robin-primary) !important;
+    color: var(--gumball-primary) !important;
+    border-bottom: var(--nav-slit-width) solid var(--gumball-primary) !important;
 
 }
 
@@ -52,7 +73,8 @@ h1 {
     height: 50%;
 
 }
-
+/*
+Eventualtuamente essas imagens serão substituídas pelas do tema atual da S.R.
 #towerImage{
     margin: auto;
     top: 50%;
@@ -68,12 +90,12 @@ h1 {
     object-fit: cover;
     height: 50%;
 }
-
+*/
 /* Primeira seção termina aqui */
 /* Segunda seção começa aqui */
 
 .faq{
-    background-image: url(../../assets/images/thunder.svg);
+    /*background-image: url(../../assets/images/thunder.svg);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -98,7 +120,7 @@ h1 {
     padding: 20px;
     padding-right: 40px;
     border-radius: 10px;
-    background-color: var(--robin-secondary);
+    background-color: var(--gumball-primary);
 
     display: flex;
     flex-direction: column;
@@ -111,7 +133,11 @@ h1 {
     white-space: nowrap;
     text-decoration: none;
     font-weight: 400;
-    color: #ffffff;
+   color: var(--text-primary);
+}
+
+.container-menu .menu a:hover{
+   color: var(--anais-secondary);
 }
 
     /* FAQ Content */
@@ -148,7 +174,7 @@ h1 {
 .question .head{
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--robin-secondary);
+    background-color: var(--gumball-primary);
 
     display: flex;
     flex-direction: row;
@@ -171,7 +197,7 @@ h1 {
     overflow: hidden;
 }
 .question .content a{
-    color: #ffffff;
+    color: var(--anais-secondary);
     text-decoration: underline;
 }
 .openQuestion .content{
@@ -205,11 +231,12 @@ h1 {
     font-size: 1.5rem;
 }
 .btn{
-    background-color: var(--robin-lighter);
+    background-color: var(--gumball-lighter);
+    color: black;
     border: none;
 }
 .btn:hover{
-    background-color: var(--robin-secondary);
+    background-color: var(--gumball-secondary);
 }
 /* Segunda seção termina aqui */
 
