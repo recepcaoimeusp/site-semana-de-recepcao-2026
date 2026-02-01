@@ -27,7 +27,7 @@ DIVS = {
     "edisciplinas":document.getElementById("edisciplinas"),
     "outras":document.getElementById("outras")
 }
-FOTOS = ["robin","cyborg","estelar","mutano","ravena","silky"]
+FOTOS = ["gumball","anais","nicole","roberto","darwin"]
 
 index = 0
 function adicionarPergunta(pergunta){
@@ -44,7 +44,7 @@ function adicionarPergunta(pergunta){
 
     // tratando erros de foto
     if (!FOTOS.includes(foto)){
-        foto = FOTOS[index % 6]
+        foto = FOTOS[index % 4]
     }
 
     // direct approach
@@ -63,7 +63,7 @@ function adicionarPergunta(pergunta){
     head = document.createElement("div")
     head.classList.add("head")
     img = document.createElement("img")
-    img.setAttribute("src", "assets/images/"+foto+"-face.svg")
+    img.setAttribute("src", "assets/images/"+foto+"-face.png")
     img.setAttribute("alt", "")
     title = document.createElement("div")
     title.classList.add("title")
