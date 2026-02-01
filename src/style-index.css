@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: url(fontes/Minecraftia-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fontes/Montserrat-VariableFont_wght.ttf);
+}
+
+h2 {
+    font-family: 'Minecraftia', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+.section-welcome{
+    display: flex;
+   justify-content: center;
+}
+
+.section-welcome img {
+    height: 50%;
+    width: 25%;
+}
+
+.meetCommite{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 50% 20%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    justify-content: space-around;
+}
+
+.meetCommite img{
+    height: 150%;
+    width: 250%;
+}
+
+.meetCommite-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    max-width: 1200px;
+}
+
+.meetCommite-text p{
+    margin: auto 70px;
+    padding: 15px 0;
+    letter-spacing: 0.8px;
+    align-content: center;
+}
+
+
+@media only screen and (min-width: 1920px){
+    #welcomeImage{
+        height: 70%;
+    }
+
+    #siblingsImage{
+        height: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .meetCommite{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
