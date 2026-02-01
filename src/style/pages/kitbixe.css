@@ -14,7 +14,6 @@
 
 .kb-buttons a{
     text-decoration: none;
-    color: var(--text-primary);
     background-color: var(--img-red);
     padding: 10px 20px;
     border-radius: 5px;
@@ -66,9 +65,9 @@
 }
 
 .bottons {
-    flex: 0 0 5em;
+    flex: 0 0 7em;
     padding-right: 1.5em;
-    height: 5em;
+    height: 7em;
     align-content: center;
 }
 
