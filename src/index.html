@@ -36,84 +36,77 @@
     <!-- <link rel="stylesheet" href="./style/pages/home.css"> -->
     <!-- E crie o arquivo no caminho especificado -->
 
-    <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
 </head>
 
-<body class="flex flex-col min-h-dvh" name="quem-somos">
+<body class="flex flex-col min-h-screen" name="quem-somos">
 
     <!--   <main class="md:container mx-auto mt-10 px-4 md:px-0">
         <!-- Conteúdo da página 
     </main> -->
     <!-- Se quiser adicionar um script customizado, adicione-o no final do <body> -->
     <!-- <script src="./scripts/index.js"></script> -->
+    <header>
+        <nav class="z-2 w-full h-fit md:h-20 bg-(--bg-header)">
+            <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
+                <a class="flex-shrink-0 h-20 md:h-full w-auto">
+                    <img src="assets/logosemana-alt.png" id="logo" class="h-20 md:h-full w-auto"
+                        alt="Logo da Semana de Recepção IME USP">
+                </a>
 
-    <nav class="z-2 w-full h-fit md:h-20 bg-(--bg-header)">
-        <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
-            <a class="flex-shrink-0 h-20 md:h-full w-auto">
-                <img src="assets/placeholder.png" id="logo" class="h-20 md:h-full w-auto"
-                    alt="Logo da Semana de Recepção IME USP">
-            </a>
+                <input type="checkbox" id="btn-menu" class="hidden peer" />
+                <label for="btn-menu" class="cursor-pointer block md:hidden items-center"
+                    aria-label="Ícone do menu hamburguer">☰</label>
 
-            <input type="checkbox" id="btn-menu" class="hidden peer" />
-            <label for="btn-menu" class="cursor-pointer block md:hidden items-center"
-                aria-label="Ícone do menu hamburguer">☰</label>
+                <ul class="w-full md:w-fit flex flex-col md:flex-row items-center gap-0 
+            duration-400 transition-all max-h-0 md:max-h-none md:h-full overflow-hidden peer-checked:max-h-96">
+                    <li id="link-quem-somos" class="w-full md:w-fit">
+                        <a href="#">Quem Somos?</a>
+                    </li>
+                    <li id="link-semana" class="w-full md:w-fit">
+                        <a href="">Semana de Recepção</a>
+                    </li>
+                    <li id="link-kit-bixe" class="w-full md:w-fit">
+                        <a href="">Kit Bixe</a>
+                    </li>
+                    <li id="link-FAQ" class="w-full md:w-fit">
+                        <a href="">FAQ</a>
+                    </li>
+                    <li id="link-ime" class="w-full md:w-fit">
+                        <a href="">O IME</a>
+                    </li>
+                    <li id="link-ranking" class="w-full md:w-fit">
+                        <a href="">Ranking</a>
+                    </li>
+                    <li id="link-fotos" class="w-full md:w-fit">
+                        <a href="https://sites.google.com/view/recepcaoimeusp" target="_blank">Fotos</a>
+                    </li>
+                    <li id="link-videos" class="w-full md:w-fit">
+                        <a href="https://drive.google.com/drive/folders/1Rje607bFQQOlgvBoRSubSEjzc0EV1LMF"
+                            target="_blank">Vídeos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-            <ul class="w-full md:w-fit flex flex-col md:flex-row items-center gap-0 
-            duration-400  transition-all
-            max-h-0 md:max-h-none md:h-full overflow-hidden peer-checked:max-h-96">
-                <li id="link-quem-somos" class="w-full md:w-fit">
-                    <a href="#">Quem Somos?</a>
-                </li>
-                <li id="link-semana" class="w-full md:w-fit">
-                    <a href="">Semana de Recepção</a>
-                </li>
-                <li id="link-kit-bixe" class="w-full md:w-fit">
-                    <a href="">Kit Bixe</a>
-                </li>
-                <li id="link-FAQ" class="w-full md:w-fit">
-                    <a href="">FAQ</a>
-                </li>
-                <li id="link-ime" class="w-full md:w-fit">
-                    <a href="">O IME</a>
-                </li>
-                <li id="link-ranking" class="w-full md:w-fit">
-                    <a href="">Ranking</a>
-                </li>
-                <li id="link-fotos" class="w-full md:w-fit">
-                    <a href="https://sites.google.com/view/recepcaoimeusp" target="_blank">Fotos</a>
-                </li>
-                <li id="link-videos" class="w-full md:w-fit">
-                    <a href="https://drive.google.com/drive/folders/1Rje607bFQQOlgvBoRSubSEjzc0EV1LMF"
-                        target="_blank">Vídeos</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Essa div abaixo "faz parte" do footer, uma gambiarra para dar certo -->
+    <!-- Essa div vazia abaixo "faz parte" do footer-->
     <div class="grow"></div>
     <footer class="z-1 w-full h-30 md:h-20 bg-(--bg-footer)">
-        <div class="w-full h-full flex flex-col-reverse md:flex-row justify-between items-center">
+        <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
 
-            <div class="text-center content-center h-full">
+            <div id="trademark" class="text-center content-center h-full">
                 Comissão de Recepção IME-USP © 2026
             </div>
 
             <ul class="w-1/2 md:w-80 h-full flex justify-around items-center">
-                <li id="link-facebook" class="h-full content-center icon">
-                    <a href="https://www.facebook.com/recepcaoimeusp/?locale=pt_BR" target="_blank"
-                        class="fa-brands fa-facebook icon text-center col-start-3"
-                        aria-label="Link para o Facebook da Comissão de Recepção"></a>
-                </li>
-                <li id="link-instagram" class="h-full content-center icon">
-                    <a href="https://www.instagram.com/imeusp.recepcao/" target="_blank"
-                        class="fa-brands fa-instagram icon text-center"
+                <li id="link-instagram" class="flex icon">
+                    <a href="https://www.instagram.com/imeusp.recepcao/" target="_blank" class="fa-brands fa-instagram"
                         aria-label="Link para o Instagram da Comissão de Recepção"></a>
                 </li>
-                <li id="link-tiktok" class="h-full content-center icon">
-                    <a href="https://www.tiktok.com/@imeusp.recepcao" target="_blank"
-                        class="fa-brands fa-tiktok  icon text-center"
+                <li id="link-tiktok" class="flex icon">
+                    <a href="https://www.tiktok.com/@imeusp.recepcao" target="_blank" class="fa-brands fa-tiktok"
                         aria-label="Link para o Tiktok da Comissão de Recepção"></a>
                 </li>
             </ul>

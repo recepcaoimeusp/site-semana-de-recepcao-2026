@@ -1,23 +1,21 @@
 footer{
     color: var(--fg-footer);
     font-size: 20px;
-    margin-bottom: -20px;
 }
-
 
 footer div{ font-family: var(--font-footer); }
 
 footer .icon{
-    font-size: 25px;
-    transition: 300ms;
-}
-
-footer .icon:hover{
     font-size: 30px;
     transition: 300ms;
 }
 
-footer div div{ padding:0 40px 0 40px; }
+footer .icon:hover{
+    font-size: 35px;
+    transition: 300ms;
+}
+
+#trademark{ padding:0 40px 0 40px; }
 
 #link-facebook:hover{ color: var(--link-facebook); }
 #link-instagram:hover{ color: var(--link-instagram); }

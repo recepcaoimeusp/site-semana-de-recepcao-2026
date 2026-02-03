@@ -1,3 +1,13 @@
+
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('../fonts/Minecraftia-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 :root {
     --placeholder-pink:#ff80b7;
     --placeholder-orange:#ffda9b;
@@ -13,17 +23,17 @@
     --link-fotos:#fe2858;
     --link-videos:#c2450b;
 
-    --bg-header:#2c2927;
+    --bg-header:#000;
     --fg-header:#FFF;
     --bg-footer:#000;
     --fg-footer:#FFF;
-    --link-facebook:#3b5998;
+    --bg-logo:#FFF;
     --link-instagram: #833ab4;
     --link-tiktok:#fe2858;
-    --highlight:#e3334b;
+    --hover-btn-menu: 	#43c4da;
 
-    --font-header: "VT323", monospace;
-    --font-footer: "VT323", monospace;
+    --font-header: 'Minecraftia', sans-serif;
+    --font-footer: 'Minecraftia', sans-serif;
 }
 
 
