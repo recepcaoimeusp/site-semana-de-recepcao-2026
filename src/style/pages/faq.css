@@ -120,7 +120,7 @@ Eventualtuamente essas imagens serão substituídas pelas do tema atual da S.R.
     padding: 20px;
     padding-right: 40px;
     border-radius: 10px;
-    background-color: var(--gumball-primary);
+    background-color: var(--gumball-lighter);
 
     display: flex;
     flex-direction: column;
@@ -174,7 +174,7 @@ Eventualtuamente essas imagens serão substituídas pelas do tema atual da S.R.
 .question .head{
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--gumball-primary);
+    background-color: var(--gumball-lighter);
 
     display: flex;
     flex-direction: row;
