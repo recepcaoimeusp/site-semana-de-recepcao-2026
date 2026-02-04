@@ -40,13 +40,11 @@
     <link rel="stylesheet" href="style/footer.css">
 </head>
 
+<!-- Atenção: Mude o atributo name do body para a página atual (usado no cabeçalho) -->
 <body class="flex flex-col min-h-screen" name="quem-somos">
-
-    <!--   <main class="md:container mx-auto mt-10 px-4 md:px-0">
-        <!-- Conteúdo da página 
-    </main> -->
     <!-- Se quiser adicionar um script customizado, adicione-o no final do <body> -->
     <!-- <script src="./scripts/index.js"></script> -->
+
     <header>
         <nav class="z-2 w-full h-fit md:h-20 bg-(--bg-header)">
             <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
@@ -91,6 +89,10 @@
         </nav>
     </header>
 
+    <main class="md:container mx-auto mt-10 px-4 md:px-0">
+        <!-- Conteúdo da página-->
+    </main>
+
     <!-- Essa div vazia abaixo "faz parte" do footer-->
     <div class="grow"></div>
     <footer class="z-1 w-full h-30 md:h-20 bg-(--bg-footer)">
@@ -100,7 +102,7 @@
                 Comissão de Recepção IME-USP © 2026
             </div>
 
-            <ul class="w-1/2 md:w-80 h-full flex justify-around items-center">
+            <ul class="w-1/2 md:w-40 h-full flex justify-around items-center">
                 <li id="link-instagram" class="flex icon">
                     <a href="https://www.instagram.com/imeusp.recepcao/" target="_blank" class="fa-brands fa-instagram"
                         aria-label="Link para o Instagram da Comissão de Recepção"></a>
