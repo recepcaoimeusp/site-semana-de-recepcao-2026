@@ -27,7 +27,7 @@ DIVS = {
     "edisciplinas":document.getElementById("edisciplinas"),
     "outras":document.getElementById("outras")
 }
-FOTOS = ["gumball","anais","nicole","roberto","darwin"]
+FOTOS = ["gumball","anais","darwin","nicole","ricardo"]
 
 index = 0
 function adicionarPergunta(pergunta){
@@ -44,7 +44,7 @@ function adicionarPergunta(pergunta){
 
     // tratando erros de foto
     if (!FOTOS.includes(foto)){
-        foto = FOTOS[index % 4]
+        foto = FOTOS[index % FOTOS.length]
     }
 
     // direct approach
