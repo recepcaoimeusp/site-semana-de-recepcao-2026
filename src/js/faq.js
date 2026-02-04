@@ -89,4 +89,10 @@ function adicionarPergunta(pergunta){
 
     index += 1
 }
-PERGUNTAS.forEach(adicionarPergunta)
+
+const ordemVisual = ["edisciplinas", "ime", "jupiter", "outras"];
+ordemVisual.forEach(cat => {
+    // Filtra as perguntas da categoria atual
+    const perguntasDaCategoria = PERGUNTAS.filter(p => p.categoria === cat);
+    perguntasDaCategoria.forEach(adicionarPergunta);
+});

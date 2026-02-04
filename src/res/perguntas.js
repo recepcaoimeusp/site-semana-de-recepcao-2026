@@ -2,7 +2,7 @@ PERGUNTAS = [
     {
         titulo: "O que é o JupiterWeb e para que serve?",
         id: "jupiterIntro",
-        foto: "robin",
+        foto: "",
         categoria: "jupiter",
         resposta: "O JupiterWeb é o sistema que administra quase tudo relacionado à sua graduação na USP. Ele é usado para matrículas, emissão de documentos (como comprovantes de matrícula), consulta de histórico escolar, grade horária, entre outras funcionalidades. É essencial para o dia a dia acadêmico."
     },
@@ -10,7 +10,7 @@ PERGUNTAS = [
     {
         titulo: "Como anexar o comprovante de vacinação contra a Covid-19?",
         id: "comprovanteCovid",
-        foto: "cyborg",
+        foto: "",
         categoria: "jupiter",
         resposta: "No JupiterWeb ou no Portal de Serviços, há uma seção específica para anexar os comprovantes de vacinação. Se ainda não tomou todas as doses, anexe as que já tomou e atualize depois."
     },
@@ -18,7 +18,7 @@ PERGUNTAS = [
     {
         titulo: "Onde posso consultar o calendário acadêmico?",
         id: "consultarCalendario",
-        foto: "estelar",
+        foto: "",
         categoria: "jupiter",
         resposta: "O calendário acadêmico está disponível no JupiterWeb e é muito útil para saber datas importantes, como períodos de matrícula, feriados e prazos de requerimentos."
     },
@@ -26,7 +26,7 @@ PERGUNTAS = [
     {
         titulo: "Como consultar a grade curricular do meu curso?",
         id: "consultarGrade",
-        foto: "mutano",
+        foto: "",
         categoria: "jupiter",
         resposta: "No JupiterWeb, na seção \"Cursos de Ingresso\", você pode consultar a grade curricular do seu curso, que inclui disciplinas obrigatórias, optativas eletivas e optativas livres. Fique atento aos pré-requisitos das disciplinas!"
     },
@@ -34,7 +34,7 @@ PERGUNTAS = [
     {
         titulo: "Como solicitar o Cartão USP e o BUSP?",
         id: "solicitarCartao&BUSP",
-        foto: "ravena",
+        foto: "",
         categoria: "jupiter",
         resposta: "O Cartão USP (carteirinha) e o BUSP (Bilhete Único da USP) podem ser solicitados no JupiterWeb. O Cartão USP é necessário para acessar o bandejão, o CEPE e pagar meia-entrada, enquanto o BUSP permite usar os circulares da USP gratuitamente."
     },
