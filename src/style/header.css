@@ -1,0 +1,68 @@
+/* Itens da navbar*/
+nav div ul li{
+    color:var(--fg-header);
+    padding: 16px;
+    height: 100%;
+    transition: 300ms;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    font-family: var(--font-header);
+    font-size: 0.8rem;
+}
+
+nav div ul li:hover{ transition: 300ms; }
+
+/* Logo da Semana de Recepção*/
+#logo{ transition: 300ms; background-color: var(--bg-logo);}
+
+/* Icone do menu hamburguer*/
+label[for="btn-menu"]{
+	color:var(--fg-header);
+    font-size: 24px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+ nav div:has(#link-quem-somos:hover) #logo, #link-quem-somos.active-page,
+    #link-quem-somos:hover{ background-color: var(--link-quem-somos); }
+
+nav div:has(#link-quem-somos.active-page) #btn-menu:checked ~ label[for="btn-menu"]{ color:var(--link-quem-somos); }
+
+nav div:has(#link-semana:hover) #logo, #link-semana.active-page,
+    #link-semana:hover{ background-color: var(--link-semana); }
+
+nav div:has(#link-semana.active-page) #btn-menu:checked ~ label[for="btn-menu"]{ color:var(--link-semana); }
+
+nav div:has(#link-kit-bixe:hover) #logo, #link-kit-bixe.active-page,
+    #link-kit-bixe:hover{ background-color: var(--link-kit-bixe); }
+
+nav div:has(#link-kit-bixe.active-page) #btn-menu:checked ~ label[for="btn-menu"]{ color:var(--link-kit-bixe); }
+
+nav div:has(#link-FAQ:hover) #logo, #link-FAQ.active-page,
+    #link-FAQ:hover{ background-color: var(--link-FAQ); }
+
+nav div:has(#link-FAQ.active-page) #btn-menu:checked ~ label[for="btn-menu"]{ color:var(--link-FAQ); }
+
+nav div:has(#link-ime:hover) #logo, #link-ime.active-page,
+    #link-ime:hover{ background-color: var(--link-ime); }
+
+nav div:has(#link-ime.active-page) #btn-menu:checked ~ label[for="btn-menu"]{ color:var(--link-ime); }
+
+nav div:has(#link-ranking:hover) #logo, #link-ranking.active-page,
+    #link-ranking:hover{ background-color: var(--link-ranking); }
+
+nav div:has(#link-ranking.active-page) #btn-menu:checked ~ label[for="btn-menu"]{ color:var(--link-ranking); }
+
+nav div:has(#link-fotos:hover) #logo, #link-fotos.active-page,
+    #link-fotos:hover{ background-color: var(--link-fotos); }
+
+nav div:has(#link-fotos.active-page) #btn-menu:checked ~ label[for="btn-menu"]{ color:var(--link-fotos); }
+
+nav div:has(#link-videos:hover) #logo, #link-videos.active-page, 
+    #link-videos:hover{ background-color: var(--link-videos); }
+
+nav div:has(#link-videos.active-page) #btn-menu:checked ~ label[for="btn-menu"]{ color:var(--link-videos); }
+
+label[for="btn-menu"]:hover{ color:var(--hover-btn-menu) !important; } 
