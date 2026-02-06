@@ -1,3 +1,22 @@
 html {
     font-size: 100%;
 }
+
+:root {
+    /* Tema Gumball */
+    --gumball-lighter: #7AD7F0;
+    --gumball-primary: #00C6E9;
+    --gumball-secondary: #0288D1;
+
+    /* Tema Darwin */
+    --darwin-lighter: #FFCC80;
+    --darwin-primary: #FF8C44;
+    --darwin-secondary: #E65100;
+
+        /* Tema Anais */
+    --anais-lighter: #FFC1E3;
+    --anais-primary: #F58DA9;
+    --anais-secondary: #D81B60;
+
+    --text-primary: black;
+}
