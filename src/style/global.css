@@ -1,13 +1,17 @@
-/* Espero que haja algum diretório no servidor com as fontes, né */
 @font-face {
-    font-family: 'Minecraftia-Regular';
-    src:
-        url('../fonts/Minecraftia-Regular.ttf') format('truetype');
+    font-family: 'Minecraftia';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Minecraftia'), url('https://fonts.cdnfonts.com/s/31977/Minecraftia.woff') format('woff');
 }
 
+
 @font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat.ttf') format('truetype');
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
 }
 
 /*
@@ -29,4 +33,12 @@ IMG é de Incrível Mundo de Gumball, não de imagem kkkkk
 
 section{
     padding: 0 1rem;
+}
+
+h1, h2 {
+    font-family: 'Minecraftia';
+}
+
+p {
+    font-family: 'Montserrat';
 }
