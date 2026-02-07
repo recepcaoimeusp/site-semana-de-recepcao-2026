@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pontos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-5xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <canvas id="myChart"></canvas>
+    </div>
+
+<script>
+    let myChart = null;
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSf6GbvneRrzybgREVlf08kDJmniJG2EyTyMM1FHhXl5eIRRkrE49FuRGoOXkSE1Q/pub?gid=271482103&single=true&output=csv';
+
+    async function loadData() {
+        try {
+            const response = await fetch(sheetUrl);
+            const csvText = await response.text();
+            const rows = csvText.split('\n').filter(row => row.trim());
+            
+            const labels = [];
+            const data = [];
+
+            for (let i = 9; i < 15 && i < rows.length; i++) {
+                const cols = rows[i].split(',');
+                if (cols[1] && cols[2]) {
+                    labels.push(cols[1].trim());
+                    data.push(parseFloat(cols[2].trim()));
+                }
+            }
+
+            const ctx = document.getElementById('myChart').getContext('2d');
+            if (myChart) myChart.destroy();
+
+            myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Pontos',
+                        data: data,
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                    }]
+                }
+            });
+        } catch (error) {
+            console.error('Erro:', error);
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', loadData);
+</script>
+</body>
+</html>
