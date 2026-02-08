@@ -1,0 +1,261 @@
+/* Exemplo de como utilizar a fonte. */
+
+/* h1{
+    font-family: 'Croteau Regular';
+    font-size: 32px;
+} */
+
+/* Exemplo de uso dos temas. Sinta-se livre para remover o código abaixo */ 
+
+/* Idealmente isso estaria em 'global.css', mas deixei aqui de forma temporária*/
+
+body {
+    background-color: white;
+    color: var(--text-primary);
+    font-family: 'Croteau Regular';
+    font-size: 16px;
+}
+
+nav{
+    background-color: var(--darwin-primary);
+}
+
+nav .active{
+    color: var(--gumball-primary) !important;
+    border-bottom: var(--nav-slit-width) solid var(--gumball-primary) !important;
+
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Primeira seção começa aqui */
+
+.section-welcome{
+    background-color: #fce464;
+    color: var(--text-primary);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.section-welcome .images-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 85vh;
+}
+
+.section-welcome .images-container img{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+
+}
+/*
+Eventualtuamente essas imagens serão substituídas pelas do tema atual da S.R.
+#towerImage{
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    height: 60%;
+    max-width: 90%;
+    filter: invert(99%) sepia(0%) saturate(5%) hue-rotate(237deg) brightness(104%) contrast(100%);
+
+}
+
+#cityImage{
+    object-fit: cover;
+    height: 50%;
+}
+*/
+/* Primeira seção termina aqui */
+/* Segunda seção começa aqui */
+
+.faq{
+    /*background-image: url(../../assets/images/thunder.svg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: scroll;
+    background-blend-mode: darken;
+}
+.container-faq{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.container-faq .container-menu{
+    position: relative;
+}
+
+.container-menu .menu{
+    position: sticky;
+    top: 10px;
+
+    padding: 20px;
+    padding-right: 40px;
+    border-radius: 10px;
+    background-color: var(--gumball-primary);
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Fuji Regular';
+}
+
+.container-menu .menu a{
+    font-size: 1.5rem;
+    white-space: nowrap;
+    text-decoration: none;
+    font-weight: 400;
+   color: var(--text-primary);
+}
+
+.container-menu .menu a:hover{
+   color: var(--anais-secondary);
+}
+
+    /* FAQ Content */
+.container-faq .container-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.main-faq-title{
+    font-size: 4rem;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+.cat-title{
+    font-size: 2.5rem;
+}
+.container-questions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Fuji Regular';
+}
+
+    /* QUESTION */
+.question {
+    flex-grow: 1;
+}
+.question .head{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--gumball-primary);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+.head .title{
+    flex-grow: 1;
+}
+.head img{
+    width: 30px;
+}
+.question .content{
+    max-height: 0;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+.question .content a{
+    color: var(--anais-secondary);
+    text-decoration: underline;
+}
+.openQuestion .content{
+    max-height: 5000px !important;
+}
+.question .fa-chevron-up{
+    transition: .5s;
+}
+.openQuestion .fa-chevron-up{
+    transform: rotate(180deg);
+}
+.content {
+    padding: 6px;
+}
+
+    /* GUIA */
+#guia-bixe{
+    padding-top: 20px;
+}
+.guia-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Fuji Regular';
+}
+.guia-content a{
+    text-decoration: none;
+    font-size: 2rem;
+}
+.guia-texto{
+    font-size: 1.5rem;
+}
+.btn{
+    background-color: var(--gumball-lighter);
+    color: black;
+    border: none;
+}
+.btn:hover{
+    background-color: var(--gumball-secondary);
+}
+/* Segunda seção termina aqui */
+
+/* Media Queries -- DEIXE SEMPRE NO FINAL DO ARQUIVO */
+/* Organize as media queries de acordo com a ordem de tamanho de tela (do menor para o maior) */
+
+@media only screen and (max-width: 400px) {
+    .container-faq{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .head img{
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px){
+
+    #cityImage{
+        height: 40%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container-menu{
+        display: none;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1920px){
+    #cityImage{
+        height: 50%;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    #cityImage{
+        height: 60%;
+    }
+    #towerImage{
+        height: 70%;
+    }
+}

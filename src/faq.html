@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comissão de Recepção IME - USP</title>
+    <link rel="icon" href="assets/images/ico.png" type="image/x-icon" />
+
+    <!-- Folhas de estilo-->
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./style/reset.css" />
+    <!-- Bootstrap 5 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Folhas de estilo customizadas. A ordem importa! -->
+    <link rel="stylesheet" href="./style/global.css" />
+    <link rel="stylesheet" href="./style/pages/faq.css" />
+
+    <!-- Componentes -->
+    <link rel="stylesheet" href="./style/components/header.css" />
+
+    <link rel="stylesheet" href="style/components/meet-committee.css" />
+
+    <!-- ****Folha de estilo do header -->
+    <link rel="stylesheet" href="./style/components/header.css" />
+
+    <!-- ****Folha de estilo do footer -->
+    <link rel="stylesheet" href="style/components/footer.css" />
+
+    <!-- Font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Caso queira criar uma folha de estilo para um componente, use, por exemplo: -->
+    <!-- <link rel="stylesheet" href="./style/components/header.css"> -->
+    <!-- E crie o arquivo no caminho especificado -->
+
+    <!-- Caso queira criar uma folha de estilo para uma página, use, por exemplo: -->
+    <!-- <link rel="stylesheet" href="./style/pages/home.css"> -->
+    <!-- E crie o arquivo no caminho especificado -->
+
+    <!-- Além disso, tome cuidado! alguns nomes de classes são reservados do bootstrap e.g: -->
+    <!-- container, row, col, btn, btn-primary, btn-secondary, btn-success, btn-danger, btn-warning, btn-info, btn-light, btn-dark, btn-link, btn-sm, btn-lg, btn-block, btn-group, btn-group-vertical, btn-toolbar -->
+    <!-- Usá-las pode fazer com que o estilo do bootstrap seja aplicado sem que você perceba -->
+  </head>
+
+  <body name="faq">
+    <!-- Apenas exemplo da estrutura de um header. Sinta-se livre para remover -->
+    <header>
+      <!-- ****Deixei alguns dos links ativos para mostrar como ficou -->
+      <!-- Adicionar active na div nav-item para colocar highlight no link -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <div
+            class="collapse navbar-collapse align-items-center p-1 bd-highlight nav-item active"
+          >
+            <a href="./index.html">
+              <img src="assets/images/logo-amarela.svg" alt="" />
+            </a>
+          </div>
+          <!-- links -->
+          <div
+            class="collapse navbar-collapse flex-row align-items-stretch align-self-stretch"
+            id="navbarNav"
+          >
+            <div
+              id="menu-index"
+              class="d-flex align-items-center p-3 bd-highlight nav-item"
+            >
+              <a href="./index.html">Quem Somos?</a>
+            </div>
+            <div
+              id="menu-semana"
+              class="d-flex align-items-center p-3 bd-highlight nav-item"
+            >
+              <a href="./semana.html">Semana de Recepção</a>
+            </div>
+            <div
+              id="menu-kit"
+              class="d-flex align-items-center p-3 bd-highlight nav-item"
+            >
+              <a href="./kitbixe.html">Kit Bixe</a>
+            </div>
+            <div
+              id="menu-faq"
+              class="d-flex align-items-center p-3 bd-highlight nav-item"
+            >
+              <a href="./faq.html">FAQ</a>
+            </div>
+            <div class="d-flex align-items-center p-3 bd-highlight nav-item">
+              <a href="./o-ime.html">O IME</a>
+            </div>
+            <div class="d-flex align-items-center p-3 bd-highlight nav-item">
+              <a
+                href="https://sites.google.com/view/recepcaoimeusp"
+                target="_blank"
+                >Fotos</a
+              >
+            </div>
+            <div class="d-flex align-items-center p-3 bd-highlight nav-item">
+              <a
+                href="https://drive.google.com/drive/folders/1Rje607bFQQOlgvBoRSubSEjzc0EV1LMF"
+                target="_blank"
+                >videos</a
+              >
+            </div>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </header>
+    <!-- Navbar termina aqui -->
+
+    <main>
+      <!-- Primeira seção com imagem de fundo -->
+      <!-- Comentada por conta do fundo branco temporário -->
+      <!-- <section>
+        <div class="container-fluid section-welcome">
+          <div class="col-12 px-0">
+            <div class="images-container">
+              <img
+                src="assets/images/.svg"
+                alt=""
+                id=""
+              />
+              <img src="assets/images/.svg" alt="" id="" />
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Fim da primeira seção -->
+      <!-- Seção do conhecendo a comissão -->
+
+      <!-- FAQ-->
+      <section class="faq">
+        <div class="container-fluid pt-5 container-faq">
+          <div class="container-menu">
+            <div class="menu">
+              <a href="#edisciplinas">e-Disciplinas</a>
+              <a href="#ime">IME</a>
+              <a href="#jupiter">JupiterWeb</a>
+              <a href="#outras">Outras</a>
+            </div>
+          </div>
+          <div class="container-content">
+            <div class="main-faq-title">FAQ</div>
+            <div class="content">
+              <div id="edisciplinas" class="category">
+                <div class="cat-title">e-Disciplinas</div>
+                <div class="container-questions"></div>
+              </div>
+              <div id="ime" class="category">
+                <div class="cat-title">IME</div>
+                <div class="container-questions"></div>
+              </div>
+              <div id="jupiter" class="category">
+                <div class="cat-title">Júpiter</div>
+                <div class="container-questions"></div>
+              </div>
+              <div id="outras" class="category">
+                <div class="cat-title">Outras</div>
+                <div class="container-questions"></div>
+              </div>
+            </div>
+            <div id="guia-bixe" class="main-faq-title">Guia do Bixe</div>
+            <div class="content guia-content">
+              <div class="guia-texto">
+                O Guia do Bixe é destinado aos novos alunos do IME-USP. Nele,
+                você pode encontrar (quase) todas as informações e dicas
+                importantes para a sua vida universitária!
+              </div>
+              <div class="col">
+                <a
+                  href="./assets/etc/GuiaDeBixe.pdf"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >Baixar Guia do Bixe</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="container-fluid d-flex justify-content-between flex-wrap-reverse"
+    >
+      <div class="d-inline-flex p-4 text-center">
+        Comissão de Recepção IME-USP © 2026
+      </div>
+
+      <div
+        class="d-inline-flex align-items-stretch flex-wrap justify-content-center"
+      >
+        <div class="d-inline-flex align-items-center p-4 icon">
+          <a
+            href="https://www.facebook.com/recepcaoimeusp/?locale=pt_BR"
+            target="_blank"
+            class="fa-brands fa-facebook"
+          ></a>
+        </div>
+        <div class="d-inline-flex align-items-center p-4 icon">
+          <a
+            href="https://www.instagram.com/imeusp.recepcao/"
+            target="_blank"
+            class="fa-brands fa-instagram"
+          ></a>
+        </div>
+        <div class="d-inline-flex align-items-center p-4 icon">
+          <a
+            href="https://www.tiktok.com/@imeusp.recepcao"
+            target="_blank"
+            class="fa-brands fa-tiktok"
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <!-- SCRIPTS. Não remova! -->
+    <!-- Bootstrap 5 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/nav.js"></script>
+
+    <script src="res/perguntas.js"></script>
+    <script src="js/faq.js"></script>
+
+    <!-- Se quiser adicionar um script customizado, adicione-o abaixo -->
+    <!-- <script src="./scripts/index.js"></script> -->
+  </body>
+</html>
