@@ -1,55 +1,34 @@
-<!doctype html>
-<html lang="pt-br">
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Recomendamos que mude o título dependendo da página -->
-    <title>Semana de Recepção IME - USP</title>
-    <link rel="icon" href="assets/images/ico.png" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking - Semana de Recepção IME - USP</title>
+    <link rel="icon" href="../assets/images/ico.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Folhas de estilo -->
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="./style/reset.css" />
-
-    <!-- Usando a cdn do tailwind -->
+    <link rel="stylesheet" href="../style/reset.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
-    <!-- Folhas de estilo customizadas. A ordem importa! -->
-    <link rel="stylesheet" href="./style/global.css" />
+    <link rel="stylesheet" href="../style/global.css" />
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/footer.css">
 
-    <!-- Componentes -->
-    <!-- Caso queira criar uma folha de estilo para um componente, use, por exemplo: -->
-    <!-- <link rel="stylesheet" href="./style/components/header.css"> -->
-    <!-- E crie o arquivo no caminho especificado -->
-
-    <!-- Páginas -->
-    <!-- Caso queira criar uma folha de estilo para uma página, use, por exemplo: -->
-    <!-- <link rel="stylesheet" href="./style/pages/home.css"> -->
-    <!-- E crie o arquivo no caminho especificado -->
-
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
-<!-- Atenção: Mude o atributo name do body para a página atual (usado no cabeçalho) -->
-<body class="flex flex-col min-h-screen" name="quem-somos">
-    <!-- Se quiser adicionar um script customizado, adicione-o no final do <body> -->
-    <!-- <script src="./scripts/index.js"></script> -->
-
+<body class="flex flex-col min-h-screen" name="ranking">
     <header>
         <nav class="z-2 w-full h-fit md:h-20 bg-(--bg-header)">
             <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
-                <a class="flex-shrink-0 h-20 md:h-full w-auto">
-                    <img src="assets/logosemana.png" id="logo" class="h-20 md:h-full w-auto"
+                <a class="flex-shrink-0 h-20 md:h-full w-auto" href="../index.html">
+                    <img src="../assets/logosemana.png" id="logo" class="h-20 md:h-full w-auto"
                         alt="Logo da Semana de Recepção IME USP">
                 </a>
 
@@ -60,7 +39,7 @@
                 <ul class="w-full md:w-fit flex flex-col md:flex-row items-center gap-0 
             duration-400 transition-all max-h-0 md:max-h-none md:h-full overflow-hidden peer-checked:max-h-96">
                     <li id="link-quem-somos" class="w-full md:w-fit">
-                        <a href="#">Quem Somos?</a>
+                        <a href="../index.html">Quem Somos?</a>
                     </li>
                     <li id="link-semana" class="w-full md:w-fit">
                         <a href="">Semana de Recepção</a>
@@ -75,7 +54,7 @@
                         <a href="">O IME</a>
                     </li>
                     <li id="link-ranking" class="w-full md:w-fit">
-                        <a href="pages/ranking.html">Ranking</a>
+                        <a href="ranking.html">Ranking</a>
                     </li>
                     <li id="link-fotos" class="w-full md:w-fit">
                         <a href="https://sites.google.com/view/recepcaoimeusp" target="_blank">Fotos</a>
@@ -89,15 +68,15 @@
         </nav>
     </header>
 
-    <main class="md:container mx-auto mt-10 px-4 md:px-0">
-        <!-- Conteúdo da página-->
+    <main class="md:container mx-auto mt-10 px-4 md:px-0 flex items-center justify-center">
+        <div class="max-w-5xl w-full bg-white p-8 rounded-lg shadow-lg">
+            <canvas id="myChart"></canvas>
+        </div>
     </main>
 
-    <!-- Essa div vazia abaixo "faz parte" do footer-->
     <div class="grow"></div>
     <footer class="z-1 w-full h-30 md:h-20 bg-(--bg-footer)">
         <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
-
             <div id="trademark" class="text-center content-center h-full">
                 Comissão de Recepção IME-USP © 2026
             </div>
@@ -115,7 +94,49 @@
         </div>
     </footer>
 
-    <script src="scripts/header.js"></script>
-</body>
+<script>
+    let myChart = null;
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSf6GbvneRrzybgREVlf08kDJmniJG2EyTyMM1FHhXl5eIRRkrE49FuRGoOXkSE1Q/pub?gid=271482103&single=true&output=csv';
 
+    async function loadData() {
+        try {
+            const response = await fetch(sheetUrl);
+            const csvText = await response.text();
+            const rows = csvText.split('\n').filter(row => row.trim());
+            
+            const labels = [];
+            const data = [];
+
+            for (let i = 9; i < 15 && i < rows.length; i++) {
+                const cols = rows[i].split(',');
+                if (cols[1] && cols[2]) {
+                    labels.push(cols[1].trim());
+                    data.push(parseFloat(cols[2].trim()));
+                }
+            }
+
+            const ctx = document.getElementById('myChart').getContext('2d');
+            if (myChart) myChart.destroy();
+
+            myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Pontos',
+                        data: data,
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                    }]
+                }
+            });
+        } catch (error) {
+            console.error('Erro:', error);
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', loadData);
+</script>
+
+<script src="../scripts/header.js"></script>
+</body>
 </html>
