@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Semana de Recepção IME - USP</title>
+    <link rel="icon" href="../assets/images/ico.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Folhas de estilo -->
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="../style/reset.css" />
+
+    <!-- Usando a cdn do tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Folhas de estilo customizadas. A ordem importa! -->
+    <link rel="stylesheet" href="../style/global.css" />
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/footer.css">
+  </head>
+
+  <!-- Atenção: Mude o atributo name do body para a página atual (usado no cabeçalho) -->
+  <body class="flex flex-col min-h-screen" name="FAQ">
+    <header>
+        <nav class="z-2 w-full h-fit md:h-20 bg-(--bg-header)">
+            <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
+                <a class="flex-shrink-0 h-20 md:h-full w-auto" href="../index.html">
+                    <img src="../assets/logosemana.png" id="logo" class="h-20 md:h-full w-auto"
+                        alt="Logo da Semana de Recepção IME USP">
+                </a>
+
+                <input type="checkbox" id="btn-menu" class="hidden peer" />
+                <label for="btn-menu" class="cursor-pointer block md:hidden items-center"
+                    aria-label="Ícone do menu hamburguer">☰</label>
+
+                <ul class="w-full md:w-fit flex flex-col md:flex-row items-center gap-0 
+            duration-400 transition-all max-h-0 md:max-h-none md:h-full overflow-hidden peer-checked:max-h-96">
+                    <li id="link-quem-somos" class="w-full md:w-fit">
+                        <a href="../index.html">Quem Somos?</a>
+                    </li>
+                    <li id="link-semana" class="w-full md:w-fit">
+                        <a href="">Semana de Recepção</a>
+                    </li>
+                    <li id="link-kit-bixe" class="w-full md:w-fit">
+                        <a href="">Kit Bixe</a>
+                    </li>
+                    <li id="link-FAQ" class="w-full md:w-fit">
+                      <a href="faq.html">FAQ</a>
+                    </li>
+                    <li id="link-ime" class="w-full md:w-fit">
+                        <a href="">O IME</a>
+                    </li>
+                    <li id="link-ranking" class="w-full md:w-fit">
+                      <a href="ranking.html">Ranking</a>
+                    </li>
+                    <li id="link-fotos" class="w-full md:w-fit">
+                        <a href="https://sites.google.com/view/recepcaoimeusp" target="_blank">Fotos</a>
+                    </li>
+                    <li id="link-videos" class="w-full md:w-fit">
+                        <a href="https://drive.google.com/drive/folders/1Rje607bFQQOlgvBoRSubSEjzc0EV1LMF"
+                            target="_blank">Vídeos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="md:container mx-auto mt-10 px-4 md:px-0">
+      <!-- Primeira seção com imagem de fundo -->
+      <!-- Comentada por conta do fundo branco temporário -->
+      <!-- <section>
+        <div class="container-fluid section-welcome">
+          <div class="col-12 px-0">
+            <div class="images-container">
+              <img
+                src="assets/images/.svg"
+                alt=""
+                id=""
+              />
+              <img src="assets/images/.svg" alt="" id="" />
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Fim da primeira seção -->
+      <!-- Seção do conhecendo a comissão -->
+
+      <!-- FAQ-->
+      <section class="w-full py-8">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex flex-col md:flex-row gap-8">
+            <!-- Menu lateral -->
+            <div class="md:w-1/4">
+              <div class="sticky top-4 bg-white p-6 rounded-lg shadow-md">
+                <nav class="flex flex-col space-y-3" style="font-family: Minecraftia, monospace;">
+                  <a href="#edisciplinas" class="text-gray-700 hover:text-blue-600 font-semibold transition px-3 py-2 rounded hover:bg-blue-50">e-Disciplinas</a>
+                  <a href="#ime" class="text-gray-700 hover:text-blue-600 font-semibold transition px-3 py-2 rounded hover:bg-blue-50">IME</a>
+                  <a href="#jupiter" class="text-gray-700 hover:text-blue-600 font-semibold transition px-3 py-2 rounded hover:bg-blue-50">JupiterWeb</a>
+                  <a href="#outras" class="text-gray-700 hover:text-blue-600 font-semibold transition px-3 py-2 rounded hover:bg-blue-50">Outras</a>
+                </nav>
+              </div>
+            </div>
+
+            <!-- Conteúdo principal -->
+            <div class="md:w-3/4">
+              <h1 class="text-4xl font-bold text-center mb-8 text-gray-800" style="font-family: Minecraftia, monospace;">FAQ</h1>
+              
+              <div class="space-y-8">
+                <div id="edisciplinas" class="scroll-mt-20">
+                  <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-blue-500 pb-2" style="font-family: Minecraftia, monospace;">e-Disciplinas</h2>
+                  <div class="container-questions space-y-3"></div>
+                </div>
+
+                <div id="ime" class="scroll-mt-20">
+                  <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-blue-500 pb-2" style="font-family: Minecraftia, monospace;">IME</h2>
+                  <div class="container-questions space-y-3"></div>
+                </div>
+
+                <div id="jupiter" class="scroll-mt-20">
+                  <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-blue-500 pb-2" style="font-family: Minecraftia, monospace;">Júpiter</h2>
+                  <div class="container-questions space-y-3"></div>
+                </div>
+
+                <div id="outras" class="scroll-mt-20">
+                  <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-blue-500 pb-2" style="font-family: Minecraftia, monospace;">Outras</h2>
+                  <div class="container-questions space-y-3"></div>
+                </div>
+              </div>
+
+              <!-- Guia do Bixe -->
+              <div id="guia-bixe" class="mt-12 scroll-mt-20">
+                <h2 class="text-3xl font-bold text-center mb-6 text-gray-800" style="font-family: Minecraftia, monospace;">Guia do Bixe</h2>
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md" style="font-family: Minecraftia, monospace;">
+                  <p class="text-gray-700 mb-6 text-center">
+                    O Guia do Bixe é destinado aos novos alunos do IME-USP. Nele,
+                    você pode encontrar (quase) todas as informações e dicas
+                    importantes para a sua vida universitária!
+                  </p>
+                  <div class="text-center">
+                    <a
+                      href="../assets/etc/GuiaDeBixe.pdf"
+                      class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-md"
+                      style="font-family: Minecraftia, monospace;"
+                      target="_blank"
+                      >Baixar Guia do Bixe</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Essa div vazia abaixo "faz parte" do footer-->
+    <div class="grow"></div>
+    <footer class="z-1 w-full h-30 md:h-20 bg-(--bg-footer)">
+        <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
+            <div id="trademark" class="text-center content-center h-full">
+                Comissão de Recepção IME-USP © 2026
+            </div>
+
+            <ul class="w-1/2 md:w-40 h-full flex justify-around items-center">
+                <li id="link-instagram" class="flex icon">
+                    <a href="https://www.instagram.com/imeusp.recepcao/" target="_blank" class="fa-brands fa-instagram"
+                        aria-label="Link para o Instagram da Comissão de Recepção"></a>
+                </li>
+                <li id="link-tiktok" class="flex icon">
+                    <a href="https://www.tiktok.com/@imeusp.recepcao" target="_blank" class="fa-brands fa-tiktok"
+                        aria-label="Link para o Tiktok da Comissão de Recepção"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/perguntas.js"></script>
+    <script src="../scripts/faq.js"></script>
+</body>
+
+</html>
