@@ -91,7 +91,7 @@ function adicionarPergunta(pergunta){
     toggleIcon.style.fontFamily = "Minecraftia, monospace"
     
     img = document.createElement("img")
-    img.setAttribute("src", "../assets/images/"+foto+"-face.png")
+    img.setAttribute("src", "assets/images/"+foto+"-face.png")
     img.setAttribute("alt", "")
     img.classList.add("w-12", "h-12", "object-cover", "object-center", "shrink-0")
     
