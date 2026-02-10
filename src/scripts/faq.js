@@ -93,7 +93,7 @@ function adicionarPergunta(pergunta){
     img = document.createElement("img")
     img.setAttribute("src", "../assets/images/"+foto+"-face.png")
     img.setAttribute("alt", "")
-    img.classList.add("w-12", "h-12", "rounded-full", "border-4", "border-gray-900", "object-cover", "object-center", "shrink-0")
+    img.classList.add("w-12", "h-12", "object-cover", "object-center", "shrink-0")
     
     title = document.createElement("div")
     title.classList.add("title", "flex-1", "text-xl", "font-bold", "text-gray-900")
