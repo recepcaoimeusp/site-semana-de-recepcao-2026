@@ -35,7 +35,7 @@
           requestAnimationFrame(() => {
               backdrop.classList.remove('opacity-0'); 
 
-              const scaleFactor = 4; 
+              const scaleFactor = 6; 
               const finalWidth = rect.width * scaleFactor;
               const finalHeight = rect.height * scaleFactor;
 
