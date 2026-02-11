@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Semana de Recepção IME - USP</title>
     <link rel="icon" href="assets/images/ico.png" type="image/x-icon" />
-    <!--link rel="stylesheet" href="./style/reset.css" / -->
+    <!--link rel="stylesheet" href="style/reset.css" / -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="/src/scripts/item-kitbixe.js"></script>
+    <script src="scripts/item-kitbixe.js"></script>
 
-    <link rel="stylesheet" href="./style/global.css">
-    <link rel="stylesheet" href="./style/pages/kitbixe.css"> 
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/pages/kitbixe.css">
 </head>
 
 <div id="image-modal" class="fixed inset-0 z-50 hidden">
@@ -24,151 +24,137 @@
     <header>
         <!-- Placeholder-->
     </header>
-    <main class="md:container mx-4 my-10 py-4 border-2 rounded-md md:justify-self-center md:w-7/10">
-        <section name="logo-imimeusp">
+    <main class="md:container mx-auto my-4 py-4 md:justify-self-center md:w-7/10">
+        <section name="kit-bixe" class="py-8">
+            <div class="w-full text-center justify-self-center font-bold mb-3 antialiased">
+                <h1 class="text-3xl text-white antialiased tracking-tighter bg-(--img-red) py-5">KIT BIXE</h1>
+            </div>
+
+            <div class="flex flex-wrap md:flex-nowrap items-center justify-center justify-self-center gap-10">
+                <div class="w-full md:w-1/2">
+                    <p class="text-center">Estar no primeiro semestre da faculdade é um momento repleto de novas experiências e desafios. E para te ajudar a aproveitar ao máximo essa fase, apresentamos o nosso incrível Kit Bixe: Um conjunto elaborado com tudo o que um estudante precisa para iniciar essa etapa. Nossos kits oferecem itens-chave de materiais de estudo e outros produtos gerais que são úteis para o dia a dia, tais como: </p>
+                    <div class="grid grid-flow-col grid-rows-4 mx-auto py-10 relative">
+                        <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
+                            <img src="assets/images/sacochila.png" class="object-contain max-w-10" />
+                            <div>
+                                Sacochila
+                            </div>
+                        </div>
+                        <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
+                            <img src="assets/images/caderno.png" class="object-contain max-w-10" />
+                            <div>
+                                Caderno
+                            </div>
+                        </div>
+                        <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
+                            <img src="assets/images/estojo.png" class="object-contain max-w-15" />
+                            <div>
+                                Estojo
+                            </div>
+                        </div>
+                        <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
+                            <img src="assets/images/chaveiro.png" class="object-contain max-w-15" />
+                            <div>
+                                Chaveiro
+                            </div>
+                        </div>
+                        <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
+                            <img src="assets/images/cordão.png" class="object-contain max-w-10 max-h-16" />
+                            <div>
+                                Cordão do Metrô
+                            </div>
+                        </div>
+                        <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
+                            <img src="assets/images/caneca.png" class="object-contain max-w-15" />
+                            <div>
+                                Caneca
+                            </div>
+                        </div>
+                        <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
+                            <img src="assets/images/talabarte.png" class="object-contain max-w-15" />
+                            <div>
+                                Talabarte
+                            </div>
+                        </div>
+                        <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
+                            <img src="assets/images/camiseta.png" class="object-contain max-w-15" />
+                            <div>
+                                Camiseta
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center"> O Kit Bixe pode ser encomendado previamente, utilizando o botão abaixo, ou no estande presencial da Comissão durante a semana de recepção, enquanto durarem os estoques! Caso você não tenha interesse em adquirir todos os itens em conjunto, também é possível adquiri-los separadamente ao longo da semana de recepção.
+                    </p>
+                </div>
+                <div class="md:w-1/2 object-cover block md:hidden">
+                    <img src="assets/images/kitbixe.png" alt="" id="kitBixeArt">
+                </div>
+                <div class="md:w-1/2 object-cover hidden md:block">
+                    <img src="assets/images/kitbixe-extend.png" alt="" id="kitBixeArt">
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col items-center md:flex-row my-5 px-8 py-5 bg-gray-200">
+                <div class="md:w-1/3">
+                    <h2 class="text-center text-[clamp(1rem,3cqw,2rem)] font-bold py-2.5 antialiased">KIT ACESSÍVEL</h2>
+                </div>
+                <div class="md:w-2/3">
+                        <p class="text-center">Além disso, temos a iniciativa do Kit Bixe acessível — uma forma gratuita de adquirir o produto, destinado exclusivamente aos ingressantes de baixa renda, que pode ser solicitado de acordo com um comprovante de condição socioeconômica. Esses kits são limitados e distribuídos de acordo com a ordem de solicitação. </p>
+                </div>
+            </div>
+
+            <div class="row kb-buttons">
+                    <div class="col w-sm">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYdJDQrygIBKIRPBPu9O66iD9QgBdgCo0cwtYB6o34rleckg/viewform"  target="_blank" class="btn btn-primary text-white font-bold">Encomendar Kit Bixe</a>
+                    </div>
+                    <div class="col w-sm">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEOlWRXV3NQrGACb9Oj163m1cSoSDjA9CKfvaC5CbDVoikpQ/viewform" target="_blank" class="btn btn-primary text-white font-bold">Solicitar Kit Acessível</a>
+                    </div>
+            </div>
         </section>
-        <div class="content">
-
-            <section name="kit-bixe" class="py-8">
-                    <div class="w-full text-center justify-self-center font-bold mb-3 antialiased">
-                        <h1 class="text-3xl text-white antialiased tracking-tighter bg-(--img-red) py-5">KIT BIXE</h1>
-                    </div>
-
-                    <div class="flex flex-wrap md:flex-nowrap w-4/5 md:w-full items-center justify-center justify-self-center gap-10">
-                        <div class="md:w-9/20">
-                            <p class="text-center">Estar no primeiro semestre da faculdade é um momento repleto de novas experiências e desafios. E para te ajudar a aproveitar ao máximo essa fase, apresentamos o nosso incrível Kit Bixe: Um conjunto elaborado com tudo o que um estudante precisa para iniciar essa etapa. Nossos kits oferecem itens-chave de materiais de estudo e outros produtos gerais que são úteis para o dia a dia, tais como: </p>    
-                            <div class="grid grid-flow-col grid-rows-4 mx-auto pl-10 py-10 relative">
-                                <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
-                                    <img src="./assets/images/sacochila.png" class="object-contain max-w-10">
-                                    </img>
-                                    <div>
-                                        Sacochila
-                                    </div>
-                                </div>
-                                <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
-                                    <img src="./assets/images/caderno.png" class="object-contain max-w-10">
-                                    </img>
-                                    <div>
-                                        Caderno
-                                    </div>
-                                </div>
-                                <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
-                                    <img src="./assets/images/estojo.png" class="object-contain max-w-15">
-                                    </img>
-                                    <div>
-                                        Estojo
-                                    </div>
-                                </div>
-                                <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
-                                    <img src="./assets/images/chaveiro.png" class="object-contain max-w-15">
-                                    </img>
-                                    <div>
-                                        Chaveiro
-                                    </div>
-                                </div>
-                                <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
-                                    <img src="./assets/images/cordão.png" class="object-contain max-w-10 max-h-16">
-                                    </img>
-                                    <div>
-                                        Cordão do Metrô
-                                    </div>
-                                </div>
-                                <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
-                                    <img src="./assets/images/caneca.png" class="object-contain max-w-15">
-                                    </img>
-                                    <div>
-                                        Caneca
-                                    </div>
-                                </div>
-                                <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
-                                    <img src="./assets/images/talabarte.png" class="object-contain max-w-15">
-                                    </img>
-                                    <div>
-                                        Talabarte
-                                    </div>
-                                </div>
-                                <div class='rounded-full hover:bg-gray-100 hover:scale-105 transition-all delay-75 duration-200 ease-linear py-2 cursor-pointer flex justify-center items-center gap-2'>
-                                    <img src="./assets/images/camiseta.png" class="object-contain max-w-15">
-                                    </img>
-                                    <div>
-                                        Camiseta
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-center"> O Kit Bixe pode ser encomendado previamente, utilizando o botão abaixo, ou no estande presencial da Comissão durante a semana de recepção, enquanto durarem os estoques! Caso você não tenha interesse em adquirir todos os itens em conjunto, também é possível adquiri-los separadamente ao longo da semana de recepção.
-                            </p>
+        <section name="bottons" class="b-info">
+            <div class="container-fluid pt-5">
+                <div class="col w-6/7 mx-auto">
+                    <h2 class="text-center text-lg font-bold mb-3 antialiased tracking-tighter">BOTTONS</h2>
+                    <p class="text-center">Agora que você é IMEane, é hora de mostrar para o mundo! Com nossos bottons, você pode personalizar mochilas, jaquetas e camisetas, além de colecioná-los para usar de acordo com o seu humor do dia. São 8 modelos diferentes, cada um com uma estampa exclusiva, que você pode adquirir separadamente ou em conjunto, apenas durante a semana de recepção, no estande da Comissão. As unidades são limitadas, então garanta o seu o quanto antes!
+                    </p>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <div class="group" aria-hidden="true">
+                            <img name="botton-1" class="bottons" src="assets/images/1.png" />
+                            <img name="botton-2" class="bottons" src="assets/images/2.png" />
+                            <img name="botton-3" class="bottons" src="assets/images/3.png" />
+                            <img name="botton-4" class="bottons" src="assets/images/4.png" />
+                            <img name="botton-5" class="bottons" src="assets/images/5.png" />
+                            <img name="botton-6" class="bottons" src="assets/images/6.png" />
+                            <img name="botton-7" class="bottons" src="assets/images/7.png" />
+                            <img name="botton-8" class="bottons" src="assets/images/8.png" />
                         </div>
-                        <div class="md:w-7/20 object-cover block md:hidden">
-                            <img src="assets/images/kitbixe.png" alt="" id="kitBixeArt">
+                        <div class="group" aria-hidden="true">
+                            <img name="botton-1" class="bottons" src="assets/images/1.png" />
+                            <img name="botton-2" class="bottons" src="assets/images/2.png" />
+                            <img name="botton-3" class="bottons" src="assets/images/3.png" />
+                            <img name="botton-4" class="bottons" src="assets/images/4.png" />
+                            <img name="botton-5" class="bottons" src="assets/images/5.png" />
+                            <img name="botton-6" class="bottons" src="assets/images/6.png" />
+                            <img name="botton-7" class="bottons" src="assets/images/7.png" />
+                            <img name="botton-8" class="bottons" src="assets/images/8.png" />
                         </div>
-                        <div class="md:w-7/20 object-cover hidden md:block">
-                            <img src="assets/images/kitbixe-extend.png" alt="" id="kitBixeArt">
-                        </div>
-                    </div>
-
-                    <div class="w-full flex flex-col items-center md:flex-row my-5 px-8 py-5 bg-gray-200">
-                        <div class="md:w-1/3">
-                            <h2 class="text-center text-[clamp(1rem,3cqw,2rem)] font-bold py-2.5 antialiased">KIT ACESSÍVEL</h2>
-                        </div>
-                        <div class="md:w-2/3">
-                             <p class="text-center">Além disso, temos a iniciativa do Kit Bixe acessível — uma forma gratuita de adquirir o produto, destinado exclusivamente aos ingressantes de baixa renda, que pode ser solicitado de acordo com um comprovante de condição socioeconômica. Esses kits são limitados e distribuídos de acordo com a ordem de solicitação. </p>
-                        </div>
-                    </div>
-    
-                    <div class="row kb-buttons">
-                            <div class="col w-sm">
-                                <a href="https://forms.gle/5xqLm9FYWNwEcQjq9" class="btn btn-primary disabled text-black">Encomendar Kit Bixe</a>
-                                <span class="text-gray-500 line-clamp-4"> O prazo para encomendar o Kit Bixe se encerrou </span>
-                            </div>
-                            <div class="col w-sm">
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSddCdhyPbBGo_MUq2V6B5n3asfxYtKFNvWbP7DcjqGI66PTEw/viewform" target="_blank" class="btn btn-primary text-white font-bold">Solicitar Kit Acessível </a>
-                            </div>
-                    </div>
-            </section>
-            <section name="bottons" class="b-info">
-                <div class="container-fluid section-meet-committee pt-5">
-                    <div class="row">
-                        <div class="col w-6/7 justify-self-center">
-                            <h2 class="text-center text-lg font-bold mb-3 antialiased tracking-tighter">BOTTONS</h2>
-                            <p class="text-center">Agora que você é IMEane, é hora de mostrar para o mundo! Com nossos bottons, você pode personalizar mochilas, jaquetas e camisetas, além de colecioná-los para usar de acordo com o seu humor do dia. São 8 modelos diferentes, cada um com uma estampa exclusiva, que você pode adquirir separadamente ou em conjunto, apenas durante a semana de recepção, no estande da Comissão. As unidades são limitadas, então garanta o seu o quanto antes!
-                            </p>
-                        </div>
-                        <div class="carousel">
-                            <div class="group">
-                                <img name="botton-1" class="bottons" src="/src/assets/images/1.png"></img>
-                                <img name="botton-2" class="bottons" src="/src/assets/images/2.png"></img>
-                                <img name="botton-3" class="bottons" src="/src/assets/images/3.png"></img>
-                                <img name="botton-4" class="bottons" src="/src/assets/images/4.png"></img>
-                                <img name="botton-5" class="bottons" src="/src/assets/images/5.png"></img>
-                                <img name="botton-6" class="bottons" src="/src/assets/images/6.png"></img>
-                                <img name="botton-7" class="bottons" src="/src/assets/images/7.png"></img>
-                                <img name="botton-8" class="bottons" src="/src/assets/images/8.png"></img>
-                            </div>
-                            <div aria-hidden class="group">
-                                <img name="botton-1" class="bottons" src="/src/assets/images/1.png"></img>
-                                <img name="botton-2" class="bottons" src="/src/assets/images/2.png"></img>
-                                <img name="botton-3" class="bottons" src="/src/assets/images/3.png"></img>
-                                <img name="botton-4" class="bottons" src="/src/assets/images/4.png"></img>
-                                <img name="botton-5" class="bottons" src="/src/assets/images/5.png"></img>
-                                <img name="botton-6" class="bottons" src="/src/assets/images/6.png"></img>
-                                <img name="botton-7" class="bottons" src="/src/assets/images/7.png"></img>
-                                <img name="botton-8" class="bottons" src="/src/assets/images/8.png"></img>
-                            </div>
-                            <div aria-hidden class="group">
-                                <img name="botton-1" class="bottons" src="/src/assets/images/1.png"></img>
-                                <img name="botton-2" class="bottons" src="/src/assets/images/2.png"></img>
-                                <img name="botton-3" class="bottons" src="/src/assets/images/3.png"></img>
-                                <img name="botton-4" class="bottons" src="/src/assets/images/4.png"></img>
-                                <img name="botton-5" class="bottons" src="/src/assets/images/5.png"></img>
-                                <img name="botton-6" class="bottons" src="/src/assets/images/6.png"></img>
-                                <img name="botton-7" class="bottons" src="/src/assets/images/7.png"></img>
-                                <img name="botton-8" class="bottons" src="/src/assets/images/8.png"></img>
-                            </div>
+                        <div class="group" aria-hidden="true">
+                            <img name="botton-1" class="bottons" src="assets/images/1.png" />
+                            <img name="botton-2" class="bottons" src="assets/images/2.png" />
+                            <img name="botton-3" class="bottons" src="assets/images/3.png" />
+                            <img name="botton-4" class="bottons" src="assets/images/4.png" />
+                            <img name="botton-5" class="bottons" src="assets/images/5.png" />
+                            <img name="botton-6" class="bottons" src="assets/images/6.png" />
+                            <img name="botton-7" class="bottons" src="assets/images/7.png" />
+                            <img name="botton-8" class="bottons" src="assets/images/8.png" />
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
     <footer>
         <!--Placeholder-->

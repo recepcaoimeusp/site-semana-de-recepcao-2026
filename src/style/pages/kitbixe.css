@@ -1,4 +1,4 @@
-.kb-buttons{
+.kb-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -6,13 +6,13 @@
     padding-bottom: 0;
 }
 
-.kb-buttons .col{
+.kb-buttons .col {
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
-.kb-buttons a{
+.kb-buttons a {
     text-decoration: none;
     background-color: var(--img-red);
     padding: 10px 20px;
@@ -21,17 +21,17 @@
     border-color: var(--img-red);
 }
 
-.kb-buttons .disabled{
+.kb-buttons .disabled {
     pointer-events: none;
     background-color: #ccc;
     border-color: #ccc;
 }
 
-#requestSoon{
+#requestSoon {
     font-size: 1.3rem;
 }
 
-.kb-buttons a:hover{
+.kb-buttons a:hover {
     background-color: var(--img-darker-red);
     scale: 1.05;
 }
@@ -39,12 +39,11 @@
 .carousel {
     position: relative;
     margin: 25px auto;
-    display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .carousel::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -57,25 +56,30 @@
         inset -15px 0 8px 0 rgba(255, 255, 255, 1);
 }
 
+.carousel-track {
+    display: flex;
+    animation: scroll 5s linear infinite;
+}
+
 .group {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: walk 5s linear infinite;
+    flex-shrink: 0;
 }
 
 .bottons {
-    flex: 0 0 7em;
-    padding-right: 1.5em;
     height: 7em;
-    align-content: center;
+    margin-right: 1em;
 }
 
 .carousel::-webkit-scrollbar {
     display: none;
 }
 
-@keyframes walk {
-    from {translate: 0;}
-    to {translate: -100%;}
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-64em);
+    }
 }
