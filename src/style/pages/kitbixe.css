@@ -1,3 +1,14 @@
+#kit-bixe h1,
+#kit-bixe h2 {
+    font-family: "Minecraftia";
+}
+
+#kit-bixe p,
+#kit-bixe a,
+#kit-bixe div {
+    font-family: "Montserrat";
+}
+
 .kb-buttons {
     display: flex;
     justify-content: center;

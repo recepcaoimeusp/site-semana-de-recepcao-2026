@@ -1,24 +1,47 @@
 @font-face {
-    font-family: 'Minecraftia';
+    font-family: "Minecraftia";
     font-style: normal;
     font-weight: 400;
-    src: local('Minecraftia'), url('https://fonts.cdnfonts.com/s/31977/Minecraftia.woff') format('woff');
+    src:
+        local("Minecraftia"),
+        url("../fonts/Minecraftia-Regular.ttf") format("truetype"),
+        url("https://fonts.cdnfonts.com/s/31977/Minecraftia.woff")
+            format("woff");
+    font-display: swap;
 }
-
 
 @font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
+        format("woff2");
 }
 
-/*
-IMG é de Incrível Mundo de Gumball, não de imagem kkkkk
-*/
-
 :root {
+    /* Cabeçalho e rodape */
+    --link-principal: #ff19b7;
+    --link-FAQ: #776aff;
+    --link-ime: #c1e5b7;
+    --link-ranking: #833ab4;
+    --link-fotos: #fe2858;
+    --link-videos: #c2450b;
+
+    --bg-header: #000;
+    --fg-header: #fff;
+    --bg-footer: #000;
+    --fg-footer: #fff;
+    --bg-logo: #fff;
+    --link-instagram: #833ab4;
+    --link-tiktok: #fe2858;
+    --hover-btn-menu: #43c4da;
+
+    --font-header: "Minecraftia", sans-serif;
+    --font-footer: "Minecraftia", sans-serif;
+
+    /* IMG é de Incrível Mundo de Gumball, não de imagem kkkkk */
+    /* KitBixe */
     --img-darker-red: #fa4694;
     --img-red: #ff80b7;
     --img-darker-orange: #ffc052;
@@ -28,17 +51,25 @@ IMG é de Incrível Mundo de Gumball, não de imagem kkkkk
     --img-darker-blue: #4a3ce2;
     --img-blue: #776aff;
 
-    --text-primary: #121212;
+    /* FAQ */
+    /* Tema Gumball */
+    --gumball-lighter: #7ad7f0;
+    --gumball-primary: #00c6e9;
+    --gumball-secondary: #0288d1;
+
+    /* Tema Darwin */
+    --darwin-lighter: #ffcc80;
+    --darwin-primary: #ff8c44;
+    --darwin-secondary: #e65100;
+
+    /* Tema Anais */
+    --anais-lighter: #ffc1e3;
+    --anais-primary: #f58da9;
+    --anais-secondary: #d81b60;
+
+    --text-primary: black;
 }
 
-section{
-    padding: 0 1rem;
-}
-
-h1, h2 {
-    font-family: 'Minecraftia';
-}
-
-p, a, div {
-    font-family: 'Montserrat';
+html {
+    font-size: 100%;
 }
