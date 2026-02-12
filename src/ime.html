@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O IME - Semana de Recepção IME - USP</title>
+    <link rel="icon" href="assets/images/ico.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Folhas de estilo -->
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="style/reset.css" />
+
+    <!-- Usando a cdn do tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Folhas de estilo customizadas. A ordem importa! -->
+    <link rel="stylesheet" href="style/global.css" />
+
+    <!-- Componentes -->
+    <!-- Caso queira criar uma folha de estilo para um componente, use, por exemplo: -->
+    <!-- <link rel="stylesheet" href="style/components/header.css"> -->
+    <!-- E crie o arquivo no caminho especificado -->
+
+    <!-- Páginas -->
+    <!-- Caso queira criar uma folha de estilo para uma página, use, por exemplo: -->
+    <!-- <link rel="stylesheet" href="style/pages/home.css"> -->
+    <!-- E crie o arquivo no caminho especificado -->
+    <link rel="stylesheet" href="style/pages/ime.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
+</head>
+
+<!-- Atenção: Mude o atributo name do body para a página atual (usado no cabeçalho) -->
+
+<body class="flex flex-col min-h-screen" name="ime">
+    <!-- Se quiser adicionar um script customizado, adicione-o no final do <body> -->
+    <!-- <script src="scripts/index.js"></script> -->
+
+    <header>
+        <nav class="z-2 w-full h-fit md:h-20 bg-(--bg-header)">
+            <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
+                <a class="flex-shrink-0 h-20 md:h-full w-auto">
+                    <img src="assets/logosemana.png" id="logo" class="h-20 md:h-full w-auto"
+                        alt="Logo da Semana de Recepção IME USP">
+                </a>
+
+                <input type="checkbox" id="btn-menu" class="hidden peer" />
+                <label for="btn-menu" class="cursor-pointer block md:hidden items-center"
+                    aria-label="Ícone do menu hamburguer">☰</label>
+
+                <ul class="w-full md:w-fit flex flex-col md:flex-row items-center gap-0
+            duration-400 transition-all max-h-0 md:max-h-none md:h-full overflow-hidden peer-checked:max-h-96">
+                    <li id="link-quem-somos" class="w-full md:w-fit">
+                        <a href="#">Quem Somos?</a>
+                    </li>
+                    <li id="link-semana" class="w-full md:w-fit">
+                        <a href="">Semana de Recepção</a>
+                    </li>
+                    <li id="link-kit-bixe" class="w-full md:w-fit">
+                        <a href="">Kit Bixe</a>
+                    </li>
+                    <li id="link-FAQ" class="w-full md:w-fit">
+                        <a href="faq.html">FAQ</a>
+                    </li>
+                    <li id="link-ime" class="w-full md:w-fit">
+                        <a href="ime.html">O IME</a>
+                    </li>
+                    <li id="link-ranking" class="w-full md:w-fit">
+                        <a href="ranking.html">Ranking</a>
+                    </li>
+                    <li id="link-fotos" class="w-full md:w-fit">
+                        <a href="https://sites.google.com/view/recepcaoimeusp" target="_blank">Fotos</a>
+                    </li>
+                    <li id="link-videos" class="w-full md:w-fit">
+                        <a href="https://drive.google.com/drive/folders/1Rje607bFQQOlgvBoRSubSEjzc0EV1LMF"
+                            target="_blank">Vídeos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="md:container mx-auto mt-10 px-4 md:px-0">
+        <!-- Conteúdo da página-->
+        <section>Imagem</section>
+        <!-- ATLÉTICA  -->
+        <section class="sec-inv">
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <div class="slides">
+                        <img src="./assets/images/ime/aaamat-1.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/aaamat-2.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/aaamat-3.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/aaamat-4.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/aaamat-5.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/aaamat-6.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/aaamat-7.jpg" alt="Carrossel HTML CSS Imagem 1">
+                    </div>
+                    <button class="esquerda">
+                        <div class="seta-esq"></div>
+                    </button>
+                    <button class="direita">
+                        <div class="seta-dir"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="texto-container">
+                <h2>Associação Atlética Acadêmica da Matemática</h2>
+                <p>
+                    A Associação Atlética Acadêmica da Matemática é uma instituição
+                    gerenciada por um grupo de alunos do IME que cuidam da organização
+                    de todas as modalidades esportivas, campeonatos e inters. Além disso,
+                    realizam festas e eventos de integração e também vendem produtos personalizados
+                    do instituto. Se você tem interesse em participar de alguma modalidade ou
+                    tem alguma dúvida é só entrar em contato pelas redes sociais.
+                </p>
+                <div>
+                    <a href="https://www.facebook.com/aaamat.ime/" target="_blank" class="fa-brands fa-facebook"></a>
+                    <a href="https://www.instagram.com/aaamat_imeusp/" target="_blank"
+                        class="fa-brands fa-instagram"></a>
+                </div>
+            </div>
+        </section>
+        <!-- IME  -->
+        <section>
+            <div class="texto-container">
+                <h2>Instituto de Matemática, Estatística e Computação</h2>
+                <p>
+                    O Instituto de Matemática e Estatística e Computação é uma unidade de ensino,
+                    pesquisa e extensão da Universidade de São Paulo. Possui cursos de graduação
+                    e pós-graduação nas áreas de matemática, matemática aplicada, estatística e
+                    ciência da computação. Além disso, com corpo docente e discente qualificado,
+                    realiza pesquisas científicas em suas áreas-chave e áreas relacionadas, como
+                    bioinformática, neuromatemática e educação em matemática.
+                </p>
+                <div>
+                    <a href="https://www.ime.usp.br/" class="btn">
+                        VISITE O SITE DO IME!</a>
+                </div>
+            </div>
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <div class="slides">
+                        <img src="./assets/images/ime/ime-usp-1.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/ime-usp-2.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/ime-usp-3.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/ime-usp-4.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/ime-usp-5.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/ime-usp-6.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/ime-usp-7.jpg" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/ime-usp-8.jpg" alt="Carrossel HTML CSS Imagem 1">
+                    </div>
+                    <button class="esquerda">
+                        <div class="seta-esq"></div>
+                    </button>
+                    <button class="direita">
+                        <div class="seta-dir"></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- MAPINHA-->
+        <section class="sec-inv">
+            <div class="carrossel-container">
+                <div class="carrossel mapinha">
+                    <div class="slides">
+                        <img src="./assets/images/ime/mapinha-1.png" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/mapinha-2.png" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/mapinha-3.png" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/mapinha-4.png" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/mapinha-5.png" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/mapinha-6.png" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/mapinha-7.png" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/mapinha-8.png" alt="Carrossel HTML CSS Imagem 1">
+                        <img src="./assets/images/ime/mapinha-9.png" alt="Carrossel HTML CSS Imagem 1">
+                    </div>
+                    <button class="esquerda">
+                        <div class="seta-esq"></div>
+                    </button>
+                    <button class="direita">
+                        <div class="seta-dir"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="texto-container">
+                <h2>O Mapinha do IME</h2>
+                <p>
+                    Bem-vindes ao Mapinha do IME! Como vocês ainda não conhecem o IME muito bem,
+                    fizemos um Mapinha no estilo do Pokémon para conhecerem melhor o instituto que
+                    vão aprender a amar! Além de poderem andar livremente por (quase) todo o IME,
+                    poderão conversar com várias pessoas da comunidade IMEana no caminho que vão
+                    te apresentar como é a vida de um IMEano. Esperamos que aproveitem, explorem
+                    bastante e conheçam todos os cantos do Mapinha, porque nós deixamos vários
+                    segredinhos espalhados!
+                </p>
+                <p>
+                    Para executar o mapinha vocês devem seguir os seguintes passos:
+                </p>
+                <ol>
+                    <li>
+                        <p>1: Extraia o arquivo zip chamado "mapinha.zip"</p>
+                    </li>
+                    <li>
+                        <p>2: Execute o arquivo "Game.exe" dentro da pasta extraida</p>
+                    </li>
+                </ol>
+                <div>
+                    <a href="assets/mapinha.zip" class="btn">
+                        CONHEÇA O MAPINHA DO IME!</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Essa div vazia abaixo "faz parte" do footer-->
+    <div class="grow"></div>
+    <footer class="z-1 w-full h-30 md:h-20 bg-(--bg-footer)">
+        <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
+
+            <div id="trademark" class="text-center content-center h-full">
+                Comissão de Recepção IME-USP © 2026
+            </div>
+
+            <ul class="w-1/2 md:w-40 h-full flex justify-around items-center">
+                <li id="link-instagram" class="flex icon">
+                    <a href="https://www.instagram.com/imeusp.recepcao/" target="_blank" class="fa-brands fa-instagram"
+                        aria-label="Link para o Instagram da Comissão de Recepção"></a>
+                </li>
+                <li id="link-tiktok" class="flex icon">
+                    <a href="https://www.tiktok.com/@imeusp.recepcao" target="_blank" class="fa-brands fa-tiktok"
+                        aria-label="Link para o Tiktok da Comissão de Recepção"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 -->
+    <script src="scripts/carrossel.js"></script>
+
+    <script src="scripts/header.js"></script>
+
+</body>
+
+</html>

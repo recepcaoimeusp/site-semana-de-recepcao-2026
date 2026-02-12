@@ -1,0 +1,220 @@
+body {
+    background-color: #000;
+}
+
+main * {
+    text-align: center;
+    color: #fff;
+    font-family: 'Minecraftia';
+    font-size: 16px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 35px;
+    display: flex;
+    width: 100%;
+}
+
+.carrossel-container {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-container {
+    width: 55%;
+    display: block;
+}
+
+p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    line-height: 1.6;
+    align-content: center;
+    font-family: "Minecraftia", "Croteau Regular", "Times New Roman", Times, serif;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    padding-top: 15px;
+    margin: 0 0 10px 0;
+    align-content: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ffffff66,
+        0 0 20px #ffffff33;
+}
+
+.carrossel {
+    max-height: 350px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.slides {
+    display: flex;
+    align-items: start;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    display: block !important;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.texto-container .fa-brands {
+    transform: scale(3);
+    margin: 0 60px;
+    filter: drop-shadow(0 0 5px #ffffff99);
+}
+
+.texto-container .fa-brands:hover {
+    transform: scale(3.3);
+    filter: drop-shadow(0 0 5px #fff);
+}
+
+.btn {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 10px 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #fff;
+    font-size: 1.3rem;
+    align-content: center;
+    font-family: "Minecraftia", "Croteau Regular", "Times New Roman", Times, serif;
+    text-shadow: 0 0 5px #000000aa;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px #fff;
+}
+
+button.esquerda,
+button.direita {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000066;
+    border: 2px solid #fff;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.esquerda:hover,
+button.direita:hover {
+    background-color: #aaaaaa33;
+    box-shadow: 0 0 5px #ffffffcc;
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+button.esquerda {
+    left: 15px;
+}
+
+button.direita {
+    right: 15px;
+}
+
+.seta-esq,
+.seta-dir {
+    width: 12px;
+    height: 12px;
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transition: border-color 0.3s ease;
+}
+
+.seta-esq {
+    transform: rotate(45deg);
+    margin-left: 4px;
+}
+
+.seta-dir {
+    transform: rotate(-135deg);
+    margin-right: 4px;
+}
+
+.carrossel.mapinha {
+    max-height: 600px;
+    background-color: #000;
+    box-shadow: none;
+}
+
+.carrossel.mapinha .slides {
+    height: 100%;
+    align-items: center;
+}
+
+.carrossel.mapinha .slides img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+    image-rendering: pixelated;
+    border: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    section {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sec-inv {
+        flex-direction: column-reverse;
+    }
+
+    .carrossel-container,
+    .texto-container {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    button.esquerda,
+    button.direita {
+        opacity: 0.7;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
