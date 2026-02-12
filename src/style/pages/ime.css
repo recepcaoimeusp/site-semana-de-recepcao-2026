@@ -35,10 +35,6 @@ p {
     line-height: 1.6;
     align-content: center;
     font-family: "Minecraftia", "Croteau Regular", "Times New Roman", Times, serif;
-    text-shadow:
-        0 0 5px #fff,
-        0 0 10px rgba(255, 255, 255, 0.4),
-        0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 h2 {
@@ -95,13 +91,13 @@ h2 {
 .btn {
     background-color: #fff;
     color: #000;
-    padding: 10px 10px 0 10px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 5px #fff;
     font-size: 1.3rem;
     align-content: center;
     font-family: "Minecraftia", "Croteau Regular", "Times New Roman", Times, serif;
-    text-shadow: 0 0 5px #000000aa;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
