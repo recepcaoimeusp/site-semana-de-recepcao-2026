@@ -73,3 +73,11 @@
 html {
     font-size: 100%;
 }
+
+.some-title {
+    font-family: "Minecraftia", "Montserrat", sans-serif;
+}
+
+.some-text {
+    font-family: "Montserrat", sans-serif;
+}
