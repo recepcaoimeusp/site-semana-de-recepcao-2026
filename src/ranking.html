@@ -23,10 +23,12 @@
     <link rel="stylesheet" href="style/global.css" />
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/pages/ranking.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"
+    ></script>
 </head>
-<body class="flex flex-col min-h-screen" name="ranking">
+<body class="flex flex-col min-h-screen font-poppins bg-black" name="ranking">
     <header>
         <nav class="z-2 w-full h-fit md:h-20 bg-(--bg-header)">
             <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
@@ -65,12 +67,12 @@
         </nav>
     </header>
 
-    <main class="md:container mx-auto mt-10 px-4 md:px-0 flex items-center justify-center">
-        <div class="max-w-5xl w-full bg-white p-8 rounded-lg shadow-lg">
-            <canvas id="myChart"></canvas>
-        </div>
+    <main class="w-full my-10">
+        <div id="canvas-container" class="flex w-full items-center justify-center"></div>
+        <h1 id="loading" class="text-white some-title">Carregando Ranking...</h1>
     </main>
 
+    <!-- Essa div vazia abaixo "faz parte" do footer-->
     <div class="grow"></div>
     <footer class="z-1 w-full h-30 md:h-20 bg-(--bg-footer)">
         <div class="w-full h-full flex flex-col md:flex-row justify-between items-center">
@@ -91,49 +93,7 @@
         </div>
     </footer>
 
-<script>
-    let myChart = null;
-    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSf6GbvneRrzybgREVlf08kDJmniJG2EyTyMM1FHhXl5eIRRkrE49FuRGoOXkSE1Q/pub?gid=271482103&single=true&output=csv';
-
-    async function loadData() {
-        try {
-            const response = await fetch(sheetUrl);
-            const csvText = await response.text();
-            const rows = csvText.split('\n').filter(row => row.trim());
-
-            const labels = [];
-            const data = [];
-
-            for (let i = 9; i < 15 && i < rows.length; i++) {
-                const cols = rows[i].split(',');
-                if (cols[1] && cols[2]) {
-                    labels.push(cols[1].trim());
-                    data.push(parseFloat(cols[2].trim()));
-                }
-            }
-
-            const ctx = document.getElementById('myChart').getContext('2d');
-            if (myChart) myChart.destroy();
-
-            myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'Pontos',
-                        data: data,
-                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
-                    }]
-                }
-            });
-        } catch (error) {
-            console.error('Erro:', error);
-        }
-    }
-
-    window.addEventListener('DOMContentLoaded', loadData);
-</script>
-
-<script src="scripts/header.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/ranking.js"></script>
 </body>
 </html>
