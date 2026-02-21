@@ -1,1 +1,5 @@
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|ttf|woff2)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+</FilesMatch>
+
 ErrorDocument 404 /index.html
