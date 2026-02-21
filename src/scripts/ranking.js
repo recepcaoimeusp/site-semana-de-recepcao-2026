@@ -10,25 +10,29 @@ function preload() {
 }
 
 function setup() {
-  const canvas = createCanvas(windowWidth * 0.9, windowHeight * 0.6);
+  const heightFactor = windowWidth < 600 ? 0.5 : 0.6;
+  const canvas = createCanvas(windowWidth * 0.9, windowHeight * heightFactor);
   canvas.parent("canvas-container");
   document.querySelector("#loading").remove();
 }
-
-const MIN_SCORE_SIZE = 150;
-const COLUMN_BORDER_SIZE = 10;
-const MARGIN_UP = 40;
 
 function draw() {
   if (rankingData === undefined) {
     return;
   }
 
+  // Valores responsivos baseados no tamanho da tela
+  const COLUMN_BORDER_SIZE = width < 600 ? 4 : width < 1000 ? 6 : 10;
+  const MIN_SCORE_SIZE = width < 600 ? 80 : width < 1000 ? 120 : 150;
+  const MARGIN_UP = width < 600 ? 25 : 40;
+
   const maxScore = Math.max(...rankingData.map((item) => item.score));
   const minScore = Math.min(...rankingData.map((item) => item.score));
 
   const barWidth = (0.7 * width) / rankingData.length;
   const spacing = width / rankingData.length - barWidth;
+  const labelBaseY = height - (width < 600 ? 4 : 2);
+  const labelGap = width > 1000 ? 26 : width > 600 ? 24 : width > 400 ? 20 : 18;
 
   background(0);
   noStroke();
@@ -100,35 +104,53 @@ function draw() {
 
     if (width > 1000) {
       textSize(24);
-      text("Time " + item.team, x + barWidth / 2, height - 10 - 24);
+      text("Time " + item.team, x + barWidth / 2, labelBaseY - labelGap);
       textSize(20);
-      text(item.score + "pts", x + barWidth / 2, height - 10);
+      text(item.score + "pts", x + barWidth / 2, labelBaseY);
 
       textSize(30);
       text(podiumOrdem[i] + 1 + "º", x + barWidth / 2, y - MARGIN_UP + 10);
     } else if (width > 600) {
       textSize(22);
-      text(item.team, x + barWidth / 2, height - 10 - 24);
+      text(item.team, x + barWidth / 2, labelBaseY - labelGap);
       textSize(18);
-      text(item.score + "pts", x + barWidth / 2, height - 10);
+      text(item.score + "pts", x + barWidth / 2, labelBaseY);
 
       textSize(30);
       text(podiumOrdem[i] + 1 + "º", x + barWidth / 2, y - MARGIN_UP + 10);
-    } else {
-      textSize(16);
+    } else if (width > 400) {
+      textSize(14);
       push();
-      translate(x + barWidth / 2, height - 10 - 24);
+      translate(x + barWidth / 2, labelBaseY - labelGap);
       rotate(-PI / 4);
       text(item.team, 0, 0);
       pop();
 
-      textSize(14);
-      text(podiumOrdem[i] + 1 + "º", x + barWidth / 2, y - MARGIN_UP + 10);
+      textSize(12);
+      text(item.score, x + barWidth / 2, labelBaseY);
+
+      textSize(18);
+      text(podiumOrdem[i] + 1 + "º", x + barWidth / 2, y - MARGIN_UP + 5);
+    } else {
+      // Telas muito pequenas
+      textSize(12);
+      push();
+      translate(x + barWidth / 2, labelBaseY - labelGap);
+      rotate(-PI / 4);
+      text(item.team, 0, 0);
+      pop();
+
+      textSize(10);
+      text(item.score, x + barWidth / 2, labelBaseY);
+
+      textSize(16);
+      text(podiumOrdem[i] + 1 + "º", x + barWidth / 2, y - MARGIN_UP + 5);
     }
     describe(`O time ${item.team} está com ${item.score} pontos`);
   }
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth * 0.9, windowHeight * 0.6);
+  const heightFactor = windowWidth < 600 ? 0.5 : 0.6;
+  resizeCanvas(windowWidth * 0.9, windowHeight * heightFactor);
 }

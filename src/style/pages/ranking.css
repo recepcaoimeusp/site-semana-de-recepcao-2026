@@ -1,0 +1,23 @@
+body[name="ranking"] main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 0;
+    margin: 0 !important;
+    padding: 16px 0;
+}
+
+body[name="ranking"] #canvas-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    body[name="ranking"] main {
+        padding: 8px 0;
+    }
+}

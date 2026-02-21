@@ -77,16 +77,16 @@ function adicionarPergunta(pergunta){
     // Criando container com Tailwind
     container = document.createElement("div")
     container.id = id
-    container.classList.add("question", "bg-white", "rounded-xl", "shadow-lg", "border-4", "border-gray-300", "overflow-hidden", "transition", "hover:shadow-2xl")
+    container.classList.add("question", "rounded-xl", "shadow-lg", "border-4", "overflow-hidden", "transition")
     container.setAttribute("onclick", "clickQuestion()");
 
     // Criando cabeça da pergunta com Tailwind
     head = document.createElement("div")
-    head.classList.add("head", "flex", "items-center", "gap-4", "p-6", "cursor-pointer", "bg-gradient-to-r", "from-blue-50", "to-purple-50", "hover:from-blue-100", "hover:to-purple-100", "transition")
+    head.classList.add("head", "flex", "items-center", "gap-4", "p-6", "cursor-pointer", "transition")
     
     // Ícone toggle
     toggleIcon = document.createElement("span")
-    toggleIcon.classList.add("toggle-icon", "text-2xl", "text-gray-700", "font-bold")
+    toggleIcon.classList.add("toggle-icon", "text-2xl", "font-bold")
     toggleIcon.textContent = "▶"
     toggleIcon.style.fontFamily = "Minecraftia, monospace"
     
@@ -96,7 +96,7 @@ function adicionarPergunta(pergunta){
     img.classList.add("w-12", "h-12", "object-cover", "object-center", "shrink-0")
     
     title = document.createElement("div")
-    title.classList.add("title", "flex-1", "text-xl", "font-bold", "text-gray-900")
+    title.classList.add("title", "flex-1", "text-xl", "font-bold")
     title.style.fontFamily = "Minecraftia, monospace"
     title.innerHTML = titulo
     
@@ -106,7 +106,7 @@ function adicionarPergunta(pergunta){
 
     // Criando resposta com Tailwind
     content = document.createElement("div")
-    content.classList.add("content", "bg-gray-50", "text-gray-800", "text-sm", "leading-relaxed")
+    content.classList.add("content", "text-sm", "leading-relaxed")
     content.style.fontFamily = "Minecraftia, monospace"
     content.style.maxHeight = "0px"
     content.style.opacity = "0"
