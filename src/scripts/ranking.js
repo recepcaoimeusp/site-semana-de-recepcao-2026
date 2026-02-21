@@ -2,7 +2,7 @@ let rankingData;
 let podiumOrdem = [3, 1, 0, 2, 4];
 
 function preload() {
-  loadJSON("/src/score.json", function (res) {
+  loadJSON("score.json", function (res) {
     rankingData = res;
     rankingData.sort((a, b) => b.score - a.score);
     rankingData = podiumOrdem.map((i) => rankingData[i]);
