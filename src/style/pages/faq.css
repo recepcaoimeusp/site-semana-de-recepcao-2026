@@ -5,7 +5,7 @@ body[name="FAQ"] {
 }
 
 body[name="FAQ"] * {
-    font-family: 'Minecraftia' !important;
+    font-family: "Minecraftia" !important;
 }
 
 body[name="FAQ"] main {
@@ -76,7 +76,7 @@ body[name="FAQ"] .question .head:hover {
 
 body[name="FAQ"] .question .content {
     color: #ddd !important;
-    padding: 15px !important;
+    padding: 15px;
 }
 
 body[name="FAQ"] .question .content p {
@@ -91,6 +91,17 @@ body[name="FAQ"] .question .content a {
 body[name="FAQ"] .question .content a:hover {
     color: #6cf !important;
     text-shadow: 0 0 5px #4af;
+}
+
+body[name="FAQ"] .question .content {
+    font-family: Minecraftia, monospace;
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+        max-height 0.2s ease,
+        opacity 0.2s ease;
+    padding: 0px;
 }
 
 body[name="FAQ"] .openQuestion .fa-chevron-up {

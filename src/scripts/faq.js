@@ -82,7 +82,7 @@ function adicionarPergunta(pergunta){
 
     // Criando cabeça da pergunta com Tailwind
     head = document.createElement("div")
-    head.classList.add("head", "flex", "items-center", "gap-4", "p-6", "cursor-pointer", "transition")
+    head.classList.add("head", "flex", "items-center", "gap-4", "px-6", "py-4", "cursor-pointer", "transition")
     
     // Ícone toggle
     toggleIcon = document.createElement("span")
@@ -96,8 +96,7 @@ function adicionarPergunta(pergunta){
     img.classList.add("w-12", "h-12", "object-cover", "object-center", "shrink-0")
     
     title = document.createElement("div")
-    title.classList.add("title", "flex-1", "text-xl", "font-bold")
-    title.style.fontFamily = "Minecraftia, monospace"
+    title.classList.add("title", "flex-1", "text-xl", "font-bold", "p-0")
     title.innerHTML = titulo
     
     head.appendChild(toggleIcon)
@@ -107,15 +106,6 @@ function adicionarPergunta(pergunta){
     // Criando resposta com Tailwind
     content = document.createElement("div")
     content.classList.add("content", "text-sm", "leading-relaxed")
-    content.style.fontFamily = "Minecraftia, monospace"
-    content.style.maxHeight = "0px"
-    content.style.opacity = "0"
-    content.style.overflow = "hidden"
-    content.style.transition = "max-height 0.2s ease, opacity 0.2s ease"
-    content.style.paddingTop = "0px"
-    content.style.paddingBottom = "0px"
-    content.style.paddingLeft = "0px"
-    content.style.paddingRight = "0px"
     content.innerHTML = resposta
 
     // Adicionando no container
