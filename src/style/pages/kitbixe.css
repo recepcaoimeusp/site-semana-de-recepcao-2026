@@ -1,3 +1,72 @@
+/* Index page theme aligned with FAQ/IME */
+body[name="principal"] {
+    background-color: #000;
+}
+
+body[name="principal"] main {
+    color: #ddd;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+body[name="principal"] main * {
+    font-family: "Minecraftia", sans-serif;
+}
+
+body[name="principal"] .some-title {
+    color: #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ffffff66,
+        0 0 20px #ffffff33;
+}
+
+body[name="principal"] .some-text {
+    color: #ddd;
+}
+
+body[name="principal"] .bg-gray-200 {
+    background-color: #111 !important;
+    border: 2px solid #555;
+    padding: 24px 32px !important;
+    box-sizing: border-box;
+}
+
+body[name="principal"] .rounded-full {
+    background-color: #111;
+    border: 1px solid #444;
+    border-radius: 9999px;
+}
+
+body[name="principal"] .rounded-full:hover {
+    background-color: #1a1a1a !important;
+    border-color: #666;
+}
+
+body[name="principal"] .ime-title-bg {
+    background-color: #111;
+    border: 2px solid #555;
+}
+
+body[name="principal"] .kb-buttons a,
+body[name="principal"] .btn {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 5px #ffffff66;
+}
+
+body[name="principal"] .kb-buttons a:hover,
+body[name="principal"] .btn:hover {
+    background-color: #fff;
+    box-shadow: 0 0 15px #fff;
+}
+
+body[name="principal"] .carousel::after {
+    box-shadow:
+    inset 15px 0 10px 0 rgba(0, 0, 0, 0.7),
+    inset -15px 0 10px 0 rgba(0, 0, 0, 0.7);
+}
+
 .kb-buttons {
     display: flex;
     justify-content: center;
@@ -13,6 +82,10 @@
 }
 
 .kb-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
     text-decoration: none;
     background-color: var(--img-red);
     padding: 10px 20px;

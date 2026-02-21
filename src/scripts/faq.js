@@ -77,16 +77,16 @@ function adicionarPergunta(pergunta){
     // Criando container com Tailwind
     container = document.createElement("div")
     container.id = id
-    container.classList.add("question", "bg-white", "rounded-xl", "shadow-lg", "border-4", "border-gray-300", "overflow-hidden", "transition", "hover:shadow-2xl")
+    container.classList.add("question", "rounded-xl", "shadow-lg", "border-4", "overflow-hidden", "transition")
     container.setAttribute("onclick", "clickQuestion()");
 
     // Criando cabeça da pergunta com Tailwind
     head = document.createElement("div")
-    head.classList.add("head", "flex", "items-center", "gap-4", "p-6", "cursor-pointer", "bg-gradient-to-r", "from-blue-50", "to-purple-50", "hover:from-blue-100", "hover:to-purple-100", "transition")
+    head.classList.add("head", "flex", "items-center", "gap-4", "px-6", "py-4", "cursor-pointer", "transition")
     
     // Ícone toggle
     toggleIcon = document.createElement("span")
-    toggleIcon.classList.add("toggle-icon", "text-2xl", "text-gray-700", "font-bold")
+    toggleIcon.classList.add("toggle-icon", "text-2xl", "font-bold")
     toggleIcon.textContent = "▶"
     toggleIcon.style.fontFamily = "Minecraftia, monospace"
     
@@ -96,8 +96,7 @@ function adicionarPergunta(pergunta){
     img.classList.add("w-12", "h-12", "object-cover", "object-center", "shrink-0")
     
     title = document.createElement("div")
-    title.classList.add("title", "flex-1", "text-xl", "font-bold", "text-gray-900")
-    title.style.fontFamily = "Minecraftia, monospace"
+    title.classList.add("title", "flex-1", "text-xl", "font-bold", "p-0")
     title.innerHTML = titulo
     
     head.appendChild(toggleIcon)
@@ -106,16 +105,7 @@ function adicionarPergunta(pergunta){
 
     // Criando resposta com Tailwind
     content = document.createElement("div")
-    content.classList.add("content", "bg-gray-50", "text-gray-800", "text-sm", "leading-relaxed")
-    content.style.fontFamily = "Minecraftia, monospace"
-    content.style.maxHeight = "0px"
-    content.style.opacity = "0"
-    content.style.overflow = "hidden"
-    content.style.transition = "max-height 0.2s ease, opacity 0.2s ease"
-    content.style.paddingTop = "0px"
-    content.style.paddingBottom = "0px"
-    content.style.paddingLeft = "0px"
-    content.style.paddingRight = "0px"
+    content.classList.add("content", "text-sm", "leading-relaxed")
     content.innerHTML = resposta
 
     // Adicionando no container
