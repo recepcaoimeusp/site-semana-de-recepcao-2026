@@ -55,6 +55,11 @@ nav div:has(#link-ranking:hover) #logo, #link-ranking.active-page,
 
 nav div:has(#link-ranking.active-page) #btn-menu:checked ~ label[for="btn-menu"]{ color:var(--link-ranking); }
 
+nav div:has(#link-guia:hover) #logo, #link-guia.active-page,
+    #link-guia:hover{ background-color: var(--link-guia); }
+
+nav div:has(#link-guia.active-page) #btn-menu:checked ~ label[for="btn-menu"]{ color:var(--link-guia); }
+
 nav div:has(#link-fotos:hover) #logo, #link-fotos.active-page,
     #link-fotos:hover{ background-color: var(--link-fotos); }
 

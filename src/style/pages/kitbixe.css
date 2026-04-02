@@ -94,15 +94,18 @@ body[name="principal"] .carousel::after {
     border-color: var(--img-red);
 }
 
-.kb-buttons .disabled {
-    pointer-events: none;
-    background-color: #ccc;
-    border-color: #ccc;
-}
 
 .kb-buttons a:hover {
     background-color: var(--img-darker-red);
     scale: 1.05;
+}
+
+.kb-buttons .disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    border-color: #ccc;
+    background-color: #fff3 !important;
+    box-shadow: none !important;
 }
 
 .carousel {

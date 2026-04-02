@@ -9,6 +9,8 @@ function preload() {
   });
 }
 
+setInterval(preload, 120000);
+
 function setup() {
   const heightFactor = windowWidth < 600 ? 0.5 : 0.6;
   const canvas = createCanvas(windowWidth * 0.9, windowHeight * heightFactor);
@@ -23,7 +25,7 @@ function draw() {
 
   // Valores responsivos baseados no tamanho da tela
   const COLUMN_BORDER_SIZE = width < 600 ? 4 : width < 1000 ? 6 : 10;
-  const MIN_SCORE_SIZE = width < 600 ? 80 : width < 1000 ? 120 : 150;
+  const MIN_SCORE_SIZE = width < 600 ? 40 : width < 1000 ? 60 : 75;
   const MARGIN_UP = width < 600 ? 25 : 40;
 
   const maxScore = Math.max(...rankingData.map((item) => item.score));
@@ -31,19 +33,14 @@ function draw() {
 
   const barWidth = (0.7 * width) / rankingData.length;
   const spacing = width / rankingData.length - barWidth;
-  const labelBaseY = height - (width < 600 ? 4 : 2);
+  const labelBaseY = height - (width < 600 ? 15 : 10);
   const labelGap = width > 1000 ? 26 : width > 600 ? 24 : width > 400 ? 20 : 18;
 
   background(0);
   noStroke();
   for (let i = 0; i < rankingData.length; i++) {
     const item = rankingData[i];
-    const barHeight =
-      maxScore == minScore
-        ? MIN_SCORE_SIZE
-        : ((item.score - minScore) / (maxScore - minScore)) *
-            (height - 80 - MIN_SCORE_SIZE - MARGIN_UP) +
-          MIN_SCORE_SIZE;
+    const barHeight = (1-podiumOrdem[i] / 5) * (height - 80 - MIN_SCORE_SIZE - MARGIN_UP) + MIN_SCORE_SIZE;
     const x = i * (width / rankingData.length) + spacing / 2;
     const y = height - barHeight - 80 + COLUMN_BORDER_SIZE;
 
@@ -105,16 +102,13 @@ function draw() {
     if (width > 1000) {
       textSize(24);
       text("Time " + item.team, x + barWidth / 2, labelBaseY - labelGap);
-      textSize(20);
-      text(item.score + "pts", x + barWidth / 2, labelBaseY);
+
 
       textSize(30);
       text(podiumOrdem[i] + 1 + "º", x + barWidth / 2, y - MARGIN_UP + 10);
     } else if (width > 600) {
       textSize(22);
       text(item.team, x + barWidth / 2, labelBaseY - labelGap);
-      textSize(18);
-      text(item.score + "pts", x + barWidth / 2, labelBaseY);
 
       textSize(30);
       text(podiumOrdem[i] + 1 + "º", x + barWidth / 2, y - MARGIN_UP + 10);
@@ -126,8 +120,6 @@ function draw() {
       text(item.team, 0, 0);
       pop();
 
-      textSize(12);
-      text(item.score, x + barWidth / 2, labelBaseY);
 
       textSize(18);
       text(podiumOrdem[i] + 1 + "º", x + barWidth / 2, y - MARGIN_UP + 5);
@@ -140,8 +132,6 @@ function draw() {
       text(item.team, 0, 0);
       pop();
 
-      textSize(10);
-      text(item.score, x + barWidth / 2, labelBaseY);
 
       textSize(16);
       text(podiumOrdem[i] + 1 + "º", x + barWidth / 2, y - MARGIN_UP + 5);
